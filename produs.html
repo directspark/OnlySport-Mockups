@@ -151,6 +151,19 @@
     .question-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--gray-500); transition: color var(--transition); }
     .question-link:hover { color: var(--black); }
 
+    /* ─── DE CE DE LA NOI ──────────────────────────────────────── */
+    .why-us { max-width: 1440px; margin: 0 auto; padding: 0 40px 40px; }
+    .why-us-inner { background: var(--black); border-radius: var(--radius-lg); padding: 32px 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .why-item { display: flex; flex-direction: column; gap: 10px; }
+    .why-icon { width: 40px; height: 40px; background: rgba(255,75,51,.15); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .why-icon svg { color: var(--accent); }
+    .why-title { font-size: 14px; font-weight: 700; color: var(--white); line-height: 1.3; }
+    .why-desc { font-size: 13px; color: rgba(255,255,255,.5); line-height: 1.65; }
+    @media (max-width: 768px) {
+      .why-us { padding: 0 20px 32px; }
+      .why-us-inner { grid-template-columns: 1fr; gap: 24px; padding: 24px; }
+    }
+
     /* ─── TABS ──────────────────────────────────────────────────── */
     .tabs-section { max-width: 1440px; margin: 0 auto; padding: 0 40px 64px; }
     .tab-item { border: 1px solid var(--gray-200); border-radius: var(--radius-md); margin-bottom: 8px; overflow: hidden; }
@@ -459,8 +472,8 @@
         <span>Livrare estimată: <strong>Joi, Aprilie 24 – Luni, Aprilie 28</strong></span>
       </div>
       <div class="trust-item">
-        <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <span>Produs original 100% — verificat la intrarea în stoc.</span>
+        <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <span>Produs autentic, inspectat manual, adus direct din magazinele de brand din Vest.</span>
       </div>
     </div>
 
@@ -471,6 +484,37 @@
   </div>
 
 </div><!-- /pdp-wrapper -->
+
+<!-- ─── DE CE DE LA NOI ─────────────────────────────────────────── -->
+<div class="why-us">
+  <div class="why-us-inner">
+
+    <div class="why-item">
+      <div class="why-icon">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      </div>
+      <div class="why-title">Scouted Sneakers &amp; Clothing</div>
+      <div class="why-desc">De +15 ani mergem personal în magazine Nike &amp; Adidas din Europa de Vest. Aducem doar modelele de top, niciodată versiunile mai slabe făcute special pentru outlet.</div>
+    </div>
+
+    <div class="why-item">
+      <div class="why-icon">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <div class="why-title">Stoc limitat de procesul de selecție</div>
+      <div class="why-desc">Tocmai pentru că fiecare produs e ales personal, nu vei găsi stocuri mari la noi. Ce vezi azi, mâine poate nu mai este.</div>
+    </div>
+
+    <div class="why-item">
+      <div class="why-icon">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      </div>
+      <div class="why-title">Preț premium-inteligent</div>
+      <div class="why-desc">Aducem direct, fără intermediari — așa putem oferi produse cu adevărat premium la prețuri corecte.</div>
+    </div>
+
+  </div>
+</div>
 
 <!-- ─── TABS ──────────────────────────────────────────────────────── -->
 <div class="tabs-section">
