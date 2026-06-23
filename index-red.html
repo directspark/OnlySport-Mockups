@@ -1,0 +1,1314 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OnlySport — Sneakers & Clothing, Scouted with Taste</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── RESET & BASE ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black:   #0A0A0A;
+      --white:   #FFFFFF;
+      --accent:  #E40046;
+      --accent2: #FF3B30;
+      --gray-50: #FAFAFA;
+      --gray-100:#F4F4F5;
+      --gray-200:#E4E4E7;
+      --gray-400:#A1A1AA;
+      --gray-500:#71717A;
+      --gray-700:#3F3F46;
+      --gray-900:#18181B;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+      --shadow-hover: 0 12px 40px rgba(0,0,0,.14), 0 4px 12px rgba(0,0,0,.08);
+      --transition: .2s cubic-bezier(.4,0,.2,1);
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--white); color: var(--black); font-size: 14px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    ul { list-style: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ─── TOP BAR ───────────────────────────────────────────────── */
+    .topbar { background: var(--black); color: rgba(255,255,255,.75); font-size: 15.5px; font-weight: 400; letter-spacing: .02em; padding: 9px 0; }
+    .topbar-inner { max-width: 1440px; margin: 0 auto; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .topbar-left { display: flex; align-items: center; gap: 20px; }
+    .topbar-item { display: flex; align-items: center; gap: 6px; }
+    .topbar-item svg { opacity: .6; }
+    .topbar-center { display: flex; align-items: center; gap: 8px; font-weight: 500; color: var(--accent); letter-spacing: .04em; font-size: 15px; text-transform: uppercase; }
+    .topbar-right { display: flex; align-items: center; gap: 6px; }
+    .shipping-badge { background: rgba(50,205,50,.12); border: 1px solid rgba(50,205,50,.25); color: var(--accent); padding: 3px 10px; border-radius: 20px; font-size: 15px; font-weight: 600; letter-spacing: .04em; }
+
+    /* ─── NAVBAR ────────────────────────────────────────────────── */
+    .navbar { background: var(--white); border-bottom: 1px solid var(--gray-200); position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 12px rgba(0,0,0,.06); }
+    .navbar-inner { max-width: 1440px; margin: 0 auto; padding: 0 40px; display: flex; align-items: center; height: 66px; gap: 40px; }
+    .logo { display: flex; align-items: center; gap: 0; flex-shrink: 0; }
+    .logo-mark { width: 48px; height: 48px; background: var(--black); border-radius: var(--radius-sm); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 6px 8px; }
+    .logo-mark span:first-child { color: var(--white); font-size: 15px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; line-height: 1; }
+    .logo-mark span:last-child { color: var(--accent); font-size: 14px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; line-height: 1; margin-top: 2px; }
+    .nav-links { display: flex; align-items: center; gap: 2px; flex: 1; }
+    .nav-link { padding: 8px 14px; font-size: 15.5px; font-weight: 500; color: var(--gray-700); border-radius: var(--radius-sm); transition: background var(--transition), color var(--transition); display: flex; align-items: center; gap: 4px; white-space: nowrap; }
+    .nav-link:hover { background: var(--gray-100); color: var(--black); }
+    .nav-link.active { color: var(--black); font-weight: 600; }
+    .nav-link svg { opacity: .5; transition: opacity var(--transition); }
+    .nav-link:hover svg { opacity: .8; }
+    .nav-actions { display: flex; align-items: center; gap: 4px; }
+    .nav-action-btn { width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-sm); color: var(--gray-700); transition: background var(--transition), color var(--transition); position: relative; }
+    .nav-action-btn:hover { background: var(--gray-100); color: var(--black); }
+    .cart-badge { position: absolute; top: 4px; right: 4px; background: var(--accent2); color: white; font-size: 15px; font-weight: 700; width: 15px; height: 15px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+
+    /* ─── HERO ──────────────────────────────────────────────────── */
+    .hero { background: var(--black); min-height: 88vh; display: grid; grid-template-columns: 1fr 1fr; position: relative; overflow: hidden; }
+    .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 80px 60px 80px 80px; position: relative; z-index: 2; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(50,205,50,.1); border: 1px solid rgba(50,205,50,.25); color: var(--accent); font-size: 15px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: 6px 14px; border-radius: 40px; margin-bottom: 28px; width: fit-content; }
+    .hero-eyebrow span { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.8)} }
+    .hero-title { font-size: clamp(40px, 4.5vw, 72px); font-weight: 900; color: var(--white); letter-spacing: -.03em; line-height: 1.0; margin-bottom: 24px; }
+    .hero-title .accent { color: var(--accent); }
+    .hero-title .thin { font-weight: 300; }
+    .hero-sub { font-size: 16px; color: rgba(255,255,255,.55); line-height: 1.7; max-width: 420px; margin-bottom: 40px; font-weight: 400; }
+    .hero-ctas { display: flex; align-items: center; gap: 12px; margin-bottom: 52px; }
+    .btn-primary { background: var(--accent); color: var(--black); font-size: 15.5px; font-weight: 700; letter-spacing: .02em; padding: 14px 28px; border-radius: var(--radius-sm); transition: all var(--transition); display: inline-flex; align-items: center; gap: 8px; }
+    .btn-primary:hover { background: #28b828; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(50,205,50,.3); }
+    .btn-ghost { background: transparent; color: rgba(255,255,255,.8); font-size: 15.5px; font-weight: 500; padding: 14px 24px; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,.15); transition: all var(--transition); }
+    .btn-ghost:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.3); color: var(--white); }
+    .hero-trust { display: flex; align-items: center; gap: 24px; }
+    .hero-trust-item { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.4); font-size: 14px; }
+    .hero-trust-item svg { color: var(--accent); opacity: .8; }
+    .hero-right { position: relative; display: flex; align-items: center; justify-content: center; padding: 40px; }
+    .hero-img-stack { position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+    .hero-shoe-main { width: 85%; max-width: 520px; filter: drop-shadow(0 40px 80px rgba(0,0,0,.6)); transform: rotate(-8deg) translateX(20px); transition: transform .4s ease; animation: float 4s ease-in-out infinite; }
+    @keyframes float { 0%,100%{transform:rotate(-8deg) translateX(20px) translateY(0)} 50%{transform:rotate(-8deg) translateX(20px) translateY(-12px)} }
+    .hero-shoe-accent { position: absolute; width: 50%; max-width: 280px; bottom: 15%; right: 5%; filter: drop-shadow(0 20px 40px rgba(0,0,0,.4)); transform: rotate(5deg); opacity: .7; animation: float2 5s ease-in-out infinite; }
+    @keyframes float2 { 0%,100%{transform:rotate(5deg) translateY(0)} 50%{transform:rotate(5deg) translateY(-8px)} }
+    .hero-glow { position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(50,205,50,.15) 0%, transparent 70%); border-radius: 50%; top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; }
+    .hero-label { position: absolute; background: rgba(255,255,255,.06); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.1); border-radius: var(--radius-md); padding: 12px 16px; }
+    .hero-label-top { top: 18%; left: 5%; }
+    .hero-label-bottom { bottom: 22%; left: 8%; }
+    .hero-label-text { font-size: 15px; color: rgba(255,255,255,.5); letter-spacing: .06em; text-transform: uppercase; }
+    .hero-label-val { font-size: 15px; font-weight: 700; color: var(--white); margin-top: 2px; }
+    .hero-label-val span { color: var(--accent); }
+
+    /* ─── POSITIONING STRIP ─────────────────────────────────────── */
+    .positioning-strip { background: var(--accent); padding: 0; overflow: hidden; }
+    .strip-track { display: flex; animation: marquee 120s linear infinite; width: max-content; }
+    .strip-item { display: flex; align-items: center; gap: 10px; padding: 14px 32px; white-space: nowrap; font-size: 14px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--white); flex-shrink: 0; }
+    .strip-dot { width: 5px; height: 5px; background: rgba(0,0,0,.3); border-radius: 50%; }
+    @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+    /* ─── SECTION COMMONS ───────────────────────────────────────── */
+    .section { padding: 96px 40px; max-width: 1440px; margin: 0 auto; }
+    .section-full { padding: 96px 0; }
+    .section-header { text-align: center; margin-bottom: 64px; }
+    .section-eyebrow { display: inline-block; font-size: 15px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .section-title { font-size: clamp(28px, 3vw, 44px); font-weight: 800; color: var(--black); letter-spacing: -.025em; line-height: 1.1; }
+    .section-title .accent { color: var(--accent); }
+    .section-sub { font-size: 16px; color: var(--gray-500); margin-top: 14px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+    .section-link { display: inline-flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 600; color: var(--black); border-bottom: 1.5px solid var(--accent); padding-bottom: 2px; transition: gap var(--transition), color var(--transition); }
+    .section-link:hover { gap: 10px; color: var(--accent); }
+
+    /* ─── SCOUTING PROCESS ──────────────────────────────────────── */
+    .scouting-section { background: var(--gray-50); }
+    .scouting-inner { max-width: 1440px; margin: 0 auto; padding: 96px 40px; }
+    .scouting-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .scouting-left .section-eyebrow { display: block; margin-bottom: 12px; }
+    .scouting-left .section-title { text-align: left; }
+    .scouting-left .section-sub { text-align: left; margin-left: 0; margin-top: 16px; margin-bottom: 32px; }
+    /* Edu block */
+    .edu-block { background: var(--white); border: 1px solid var(--gray-200); border-left: 3px solid var(--accent); border-radius: var(--radius-md); padding: 20px 24px; margin-bottom: 32px; }
+    .edu-block h4 { font-size: 15px; font-weight: 800; color: var(--black); margin-bottom: 10px; letter-spacing: -.01em; }
+    .edu-block p { font-size: 15px; color: var(--gray-500); line-height: 1.7; }
+    /* Criteria */
+    .scouting-criteria { display: flex; flex-direction: column; gap: 0; }
+    .criteria-item { display: flex; align-items: flex-start; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--gray-200); }
+    .criteria-item:last-child { border-bottom: none; }
+    .criteria-item:hover .criteria-icon { background: var(--accent); color: var(--black); }
+    .criteria-icon { width: 38px; height: 38px; border-radius: var(--radius-sm); background: var(--gray-100); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all var(--transition); color: var(--gray-700); }
+    .criteria-text h4 { font-size: 15.5px; font-weight: 700; color: var(--black); margin-bottom: 3px; }
+    .criteria-text p { font-size: 14.5px; color: var(--gray-500); line-height: 1.6; }
+    /* Comparison chart */
+    .scouting-visual { position: sticky; top: 24px; }
+    .compare-card { background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); border: 1px solid var(--gray-200); overflow: hidden; }
+    .compare-header { display: grid; grid-template-columns: 1fr 1fr 1fr; background: var(--black); }
+    .compare-header-cell { padding: 14px 16px; font-size: 15px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .compare-header-cell:first-child { color: var(--gray-400); }
+    .compare-header-cell.col-elite { color: var(--accent); text-align: center; }
+    .compare-header-cell.col-mfo { color: rgba(255,255,255,.4); text-align: center; }
+    .compare-row { display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid var(--gray-100); }
+    .compare-row:last-child { border-bottom: none; }
+    .compare-row:nth-child(even) { background: var(--gray-50); }
+    .compare-cell { padding: 13px 16px; font-size: 14.5px; }
+    .compare-cell:first-child { font-weight: 600; color: var(--gray-700); }
+    .compare-cell.col-elite { text-align: center; color: var(--black); font-weight: 600; }
+    .compare-cell.col-mfo { text-align: center; color: var(--gray-400); }
+    .check { color: var(--accent); font-size: 15px; }
+    .cross { color: #E0E0E0; font-size: 15px; }
+    .compare-footer { background: var(--accent); padding: 14px 20px; display: flex; align-items: center; gap: 10px; }
+    .compare-footer-icon { font-size: 18px; }
+    .compare-footer-text { font-size: 14px; font-weight: 700; color: var(--black); }
+
+    /* ─── PRODUCT CARDS ─────────────────────────────────────────── */
+    .products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .products-grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .product-card { background: var(--white); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200); transition: box-shadow var(--transition), transform var(--transition); position: relative; cursor: pointer; }
+    .product-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-4px); }
+    .card-img-wrap { position: relative; background: #EDEDED; aspect-ratio: 1; overflow: hidden; }
+    .card-img-wrap img { width: 100%; height: 100%; object-fit: contain; padding: 20px; mix-blend-mode: multiply; transition: transform .4s cubic-bezier(.4,0,.2,1); }
+    .product-card:hover .card-img-wrap img { transform: scale(1.07); }
+    .card-badge { position: absolute; top: 12px; left: 12px; font-size: 14px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 9px; border-radius: 4px; }
+    .badge-new { background: var(--black); color: var(--white); }
+    .badge-hot { background: var(--accent2); color: var(--white); }
+    .badge-pick { background: var(--accent); color: var(--black); }
+    .badge-sale { background: var(--accent2); color: var(--white); }
+    .card-wish { position: absolute; top: 10px; right: 10px; width: 32px; height: 32px; background: rgba(255,255,255,.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity var(--transition); box-shadow: var(--shadow-sm); }
+    .product-card:hover .card-wish { opacity: 1; }
+    .card-wish:hover svg { color: var(--accent2); fill: var(--accent2); }
+    .card-body { padding: 16px; }
+    .card-brand { font-size: 14px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 4px; }
+    .card-name { font-size: 15px; font-weight: 600; color: var(--black); line-height: 1.4; margin-bottom: 2px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .card-editorial { font-size: 15px; color: var(--gray-500); font-style: italic; margin-bottom: 10px; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+    .card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; }
+    .card-price { font-size: 15px; font-weight: 800; color: var(--black); letter-spacing: -.01em; }
+    .card-price-old { font-size: 15px; color: var(--gray-400); text-decoration: line-through; margin-left: 4px; font-weight: 400; }
+    .card-add { background: var(--black); color: var(--white); font-size: 15px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 8px 14px; border-radius: var(--radius-sm); transition: all var(--transition); }
+    .card-add:hover { background: var(--accent); color: var(--black); }
+    .card-rating { display: flex; align-items: center; gap: 4px; margin-bottom: 8px; }
+    .stars { color: #FBBF24; font-size: 15px; }
+    .rating-count { font-size: 15px; color: var(--gray-400); }
+
+    /* ─── SIZE OVERLAY ──────────────────────────────────────────── */
+    .size-overlay { position: absolute; inset: 0; background: rgba(10,10,10,.85); backdrop-filter: blur(4px); display: none; flex-direction: column; justify-content: flex-end; padding: 20px; border-radius: var(--radius-md); z-index: 10; }
+    .size-overlay.active { display: flex; }
+    .size-overlay-title { font-size: 15px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-bottom: 10px; }
+    .size-grid { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+    .size-btn { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15); color: rgba(255,255,255,.8); font-size: 14px; font-weight: 600; padding: 7px 10px; border-radius: 6px; cursor: pointer; transition: all var(--transition); min-width: 40px; text-align: center; }
+    .size-btn:hover, .size-btn.selected { background: var(--accent); border-color: var(--accent); color: var(--black); }
+    .size-btn.out { opacity: .3; cursor: not-allowed; text-decoration: line-through; }
+    .size-confirm { width: 100%; background: var(--accent); color: var(--black); font-size: 14px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 12px; border-radius: 8px; opacity: .4; cursor: not-allowed; transition: all var(--transition); }
+    .size-confirm.ready { opacity: 1; cursor: pointer; }
+    .size-confirm.ready:hover { background: #28b828; }
+
+    /* ─── COLLECTIONS GRID ──────────────────────────────────────── */
+    .collections-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: auto auto; gap: 16px; }
+    .collection-card { border-radius: var(--radius-lg); overflow: hidden; position: relative; cursor: pointer; background: var(--gray-900); }
+    .collection-card.large { grid-row: span 2; }
+    .collection-card-inner { aspect-ratio: 4/3; display: flex; align-items: flex-end; padding: 28px; position: relative; overflow: hidden; }
+    .collection-card.large .collection-card-inner { aspect-ratio: auto; height: 100%; }
+    .collection-bg { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform .5s ease; }
+    .collection-card:hover .collection-bg { transform: scale(1.05); }
+    .collection-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.75) 0%, rgba(0,0,0,.1) 60%); }
+    .collection-content { position: relative; z-index: 2; }
+    .collection-tag { font-size: 14px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+    .collection-name { font-size: 20px; font-weight: 800; color: var(--white); letter-spacing: -.02em; line-height: 1.1; margin-bottom: 8px; }
+    .collection-card.large .collection-name { font-size: 28px; }
+    .collection-count { font-size: 14px; color: rgba(255,255,255,.5); }
+    .collection-arrow { position: absolute; top: 20px; right: 20px; width: 32px; height: 32px; background: rgba(255,255,255,.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0; transition: all var(--transition); }
+    .collection-card:hover .collection-arrow { opacity: 1; background: var(--accent); }
+    .collection-arrow svg { color: var(--black); }
+
+    /* ─── EDITORIAL SPOTLIGHT ───────────────────────────────────── */
+    .editorial-section { background: var(--black); }
+    .editorial-inner { max-width: 1440px; margin: 0 auto; padding: 96px 40px; }
+    .editorial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .editorial-img-wrap { position: relative; background: #1a1a1a; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/5; display: flex; align-items: center; justify-content: center; }
+    .editorial-img-wrap img { width: 90%; height: 90%; object-fit: contain; mix-blend-mode: luminosity; transition: mix-blend-mode var(--transition); }
+    .editorial-img-wrap:hover img { mix-blend-mode: normal; }
+    .editorial-shoe-num { position: absolute; bottom: 20px; left: 20px; font-size: 96px; font-weight: 900; color: rgba(255,255,255,.04); line-height: 1; letter-spacing: -.04em; pointer-events: none; }
+    .editorial-content { }
+    .editorial-content .section-eyebrow { display: block; margin-bottom: 12px; }
+    .editorial-title { font-size: clamp(28px, 3vw, 44px); font-weight: 800; color: var(--white); letter-spacing: -.025em; line-height: 1.1; margin-bottom: 20px; }
+    .editorial-title .accent { color: var(--accent); }
+    .editorial-body { font-size: 15px; color: rgba(255,255,255,.5); line-height: 1.8; margin-bottom: 32px; }
+    .editorial-reasons { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; }
+    .editorial-reason { display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px; background: rgba(255,255,255,.04); border-radius: var(--radius-sm); border-left: 3px solid var(--accent); }
+    .editorial-reason-icon { color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+    .editorial-reason-text { font-size: 15px; color: rgba(255,255,255,.7); line-height: 1.5; }
+    .editorial-reason-text strong { color: var(--white); }
+    .editorial-price-row { display: flex; align-items: center; gap: 20px; margin-bottom: 24px; }
+    .editorial-price { font-size: 32px; font-weight: 900; color: var(--white); letter-spacing: -.02em; }
+    .editorial-price-badge { background: rgba(50,205,50,.15); border: 1px solid rgba(50,205,50,.3); color: var(--accent); font-size: 15px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: .04em; }
+    .editorial-cta { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--black); font-size: 15px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; padding: 14px 28px; border-radius: var(--radius-sm); transition: all var(--transition); }
+    .editorial-cta:hover { background: #28b828; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(50,205,50,.3); }
+
+    /* ─── BRAND PHILOSOPHY ──────────────────────────────────────── */
+    .philosophy-section { background: var(--gray-50); }
+    .philosophy-inner { max-width: 1440px; margin: 0 auto; padding: 96px 40px; }
+    .philosophy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .philosophy-content .section-eyebrow { display: block; margin-bottom: 12px; }
+    .philosophy-content .section-title { text-align: left; }
+    .philosophy-quote { font-size: 22px; font-weight: 700; color: var(--black); line-height: 1.5; letter-spacing: -.01em; margin: 28px 0; padding-left: 24px; border-left: 4px solid var(--accent); }
+    .philosophy-body { font-size: 15px; color: var(--gray-500); line-height: 1.8; margin-bottom: 32px; }
+    .philosophy-cta { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700; color: var(--black); border-bottom: 2px solid var(--accent); padding-bottom: 3px; transition: gap var(--transition); }
+    .philosophy-cta:hover { gap: 12px; }
+    .philosophy-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .philosophy-stat { background: var(--white); border-radius: var(--radius-md); padding: 28px; border: 1px solid var(--gray-200); box-shadow: var(--shadow-sm); }
+    .philosophy-stat-num { font-size: 36px; font-weight: 900; color: var(--black); letter-spacing: -.03em; line-height: 1; }
+    .philosophy-stat-num span { color: var(--accent); }
+    .philosophy-stat-label { font-size: 14px; color: var(--gray-500); margin-top: 6px; line-height: 1.5; }
+
+    /* ─── SOCIAL PROOF ──────────────────────────────────────────── */
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .review-card { background: var(--white); border-radius: var(--radius-md); padding: 24px; border: 1px solid var(--gray-200); box-shadow: var(--shadow-sm); }
+    .review-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+    .review-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--gray-200); display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; color: var(--gray-700); }
+    .review-name { font-size: 15px; font-weight: 700; color: var(--black); }
+    .review-date { font-size: 15px; color: var(--gray-400); margin-top: 1px; }
+    .review-verified { font-size: 14px; font-weight: 600; color: var(--accent); letter-spacing: .04em; text-transform: uppercase; background: rgba(50,205,50,.1); padding: 3px 8px; border-radius: 4px; }
+    .review-stars { color: #FBBF24; font-size: 15px; margin-bottom: 10px; }
+    .review-product { font-size: 14px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 8px; }
+    .review-text { font-size: 15px; color: var(--gray-700); line-height: 1.65; }
+    .review-text strong { color: var(--black); }
+
+    /* ─── REASSURANCE ───────────────────────────────────────────── */
+    .reassurance-strip { background: var(--black); padding: 48px 40px; }
+    .reassurance-inner { max-width: 1440px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
+    .reassurance-item { display: flex; align-items: flex-start; gap: 16px; }
+    .reassurance-icon { width: 44px; height: 44px; background: rgba(50,205,50,.12); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent); }
+    .reassurance-title { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .reassurance-desc { font-size: 14px; color: rgba(255,255,255,.4); line-height: 1.6; }
+
+    /* ─── NEWSLETTER ────────────────────────────────────────────── */
+    .newsletter-section { background: var(--gray-50); border-top: 1px solid var(--gray-200); }
+    .newsletter-inner { max-width: 640px; margin: 0 auto; padding: 96px 40px; text-align: center; }
+    .newsletter-eyebrow { display: inline-block; font-size: 15px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .newsletter-title { font-size: clamp(24px, 3vw, 36px); font-weight: 800; color: var(--black); letter-spacing: -.025em; line-height: 1.15; margin-bottom: 12px; }
+    .newsletter-sub { font-size: 15px; color: var(--gray-500); line-height: 1.7; margin-bottom: 32px; }
+    .newsletter-form { display: flex; gap: 10px; max-width: 440px; margin: 0 auto 16px; }
+    .newsletter-input { flex: 1; background: var(--white); border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm); padding: 13px 16px; font-size: 14px; color: var(--black); outline: none; transition: border-color var(--transition); }
+    .newsletter-input:focus { border-color: var(--accent); }
+    .newsletter-input::placeholder { color: var(--gray-400); }
+    .newsletter-btn { background: var(--black); color: var(--white); font-size: 15px; font-weight: 700; padding: 13px 22px; border-radius: var(--radius-sm); white-space: nowrap; transition: all var(--transition); }
+    .newsletter-btn:hover { background: var(--accent); color: var(--black); }
+    .newsletter-note { font-size: 15px; color: var(--gray-400); }
+    .newsletter-note a { text-decoration: underline; }
+
+    /* ─── FOOTER ────────────────────────────────────────────────── */
+    .footer { background: var(--gray-900); padding: 64px 40px 0; }
+    .footer-inner { max-width: 1440px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 60px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.06); }
+    .footer-brand .logo-mark { margin-bottom: 20px; }
+    .footer-tagline { font-size: 15px; color: rgba(255,255,255,.35); line-height: 1.7; max-width: 280px; margin-bottom: 24px; }
+    .footer-social { display: flex; gap: 10px; }
+    .social-btn { width: 36px; height: 36px; background: rgba(255,255,255,.06); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.4); transition: all var(--transition); }
+    .social-btn:hover { background: var(--accent); color: var(--black); }
+    .footer-col-title { font-size: 15px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.3); margin-bottom: 20px; }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-link { font-size: 15px; color: rgba(255,255,255,.45); transition: color var(--transition); }
+    .footer-link:hover { color: rgba(255,255,255,.9); }
+    .footer-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
+    .footer-contact-item svg { color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+    .footer-contact-text { font-size: 15px; color: rgba(255,255,255,.45); line-height: 1.5; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; }
+    .footer-copy { font-size: 14px; color: rgba(255,255,255,.25); }
+    .footer-copy span { color: var(--accent); }
+    .footer-legal { display: flex; gap: 20px; }
+    .footer-legal a { font-size: 14px; color: rgba(255,255,255,.25); transition: color var(--transition); }
+    .footer-legal a:hover { color: rgba(255,255,255,.6); }
+    .footer-payments { display: flex; align-items: center; gap: 8px; }
+    .pay-chip { background: rgba(255,255,255,.06); border-radius: 4px; padding: 4px 10px; font-size: 15px; font-weight: 600; color: rgba(255,255,255,.3); letter-spacing: .04em; }
+
+    /* ─── DIVIDERS / HELPERS ─────────────────────────────────────── */
+    .divider { height: 1px; background: var(--gray-200); }
+    .text-center { text-align: center; }
+    .mt-10 { margin-top: 10px; }
+    .mt-16 { margin-top: 16px; }
+    .mt-40 { margin-top: 40px; }
+    .flex-center { display: flex; align-items: center; justify-content: center; }
+    .view-all-wrap { text-align: center; margin-top: 48px; }
+  </style>
+</head>
+<body>
+
+<!-- ─── TOP BAR ──────────────────────────────────────────────────── -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <div class="topbar-item">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        +40 752 210 622
+      </div>
+      <div class="topbar-item">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Str. Revoluției Nr. 3, Târgu Mureș
+      </div>
+    </div>
+    <div class="topbar-center">
+      <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+      Produse originale 100% autentice
+    </div>
+    <div class="topbar-right">
+      <span class="shipping-badge">Livrare gratuită de la 300 Lei</span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── NAVBAR ───────────────────────────────────────────────────── -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="#" class="logo">
+      <img src="16.png" alt="OnlySport" style="height: 60px; width: auto; display: block;" />
+    </a>
+    <div class="nav-links">
+      <a href="#" class="nav-link active">Acasă</a>
+      <a href="#" class="nav-link">Branduri
+        <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
+      </a>
+      <a href="incaltaminte-barbati.html" class="nav-link">Încălțăminte Bărbați
+        <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
+      </a>
+      <a href="#" class="nav-link">Încălțăminte Femei
+        <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
+      </a>
+      <a href="#" class="nav-link">Încălțăminte Copii
+        <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
+      </a>
+      <a href="#" class="nav-link">Îmbrăcăminte
+        <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M19 9l-7 7-7-7"/></svg>
+      </a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-action-btn" title="Caută">
+        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      </button>
+      <button class="nav-action-btn" title="Cont">
+        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <button class="nav-action-btn" title="Wishlist">
+        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+      </button>
+      <button class="nav-action-btn" title="Coș">
+        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-badge">3</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ─── HERO ─────────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <span></span>
+      Scouted Sneakers &amp; Clothing
+    </div>
+    <h1 class="hero-title">
+      Aduse din Vest.<br>
+      <span class="accent">Alese personal.</span>
+    </h1>
+    <p class="hero-sub">Mergem personal în magazine Nike și Adidas din Vest și selectăm doar modele din gamele superioare, la prețuri pe care nu le vei găsi în retailul tradițional.</p>
+    <div class="hero-ctas">
+      <a href="incaltaminte-barbati.html" class="btn-primary">
+        Vezi selecția
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#scouting" class="btn-ghost">Cum alegem</a>
+    </div>
+    <div class="hero-trust">
+      <div class="hero-trust-item">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        Autentice 100%
+      </div>
+      <div class="hero-trust-item">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+        1.177+ produse
+      </div>
+      <div class="hero-trust-item">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+        Livrare gratuită 300+
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-glow"></div>
+    <div class="hero-img-stack">
+      <div class="hero-label hero-label-top">
+        <div class="hero-label-text">Scouted pick</div>
+        <div class="hero-label-val">Nike Air Force 1 <span>#1</span></div>
+      </div>
+      <img class="hero-shoe-main" src="3.png" alt="Nike Air Force 1" />
+      <img class="hero-shoe-accent" src="1.png" alt="Adidas CrazyFast" />
+      <div class="hero-label hero-label-bottom">
+        <div class="hero-label-text">Preț smart</div>
+        <div class="hero-label-val"><span>600</span> Lei</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── MARQUEE STRIP ─────────────────────────────────────────────── -->
+<div class="positioning-strip">
+  <div class="strip-track">
+    <div class="strip-item">Alegem personal fiecare produs <span class="strip-dot"></span></div>
+    <div class="strip-item">Direct din magazine Nike &amp; Adidas, nu din depozite <span class="strip-dot"></span></div>
+    <div class="strip-item">Aceeași calitate ca-n Amsterdam sau Berlin <span class="strip-dot"></span></div>
+    <div class="strip-item">Doar modele Elite și InLine — niciodată Made for Outlet <span class="strip-dot"></span></div>
+    <div class="strip-item">Produse premium fără prețul premium <span class="strip-dot"></span></div>
+    <div class="strip-item">Modele rare, în tiraje mici <span class="strip-dot"></span></div>
+    <div class="strip-item">Fără restock garantat — dacă-ți place, nu aștepta <span class="strip-dot"></span></div>
+    <!-- Duplicate for seamless loop -->
+    <div class="strip-item">Alegem personal fiecare produs <span class="strip-dot"></span></div>
+    <div class="strip-item">Direct din magazine Nike &amp; Adidas, nu din depozite <span class="strip-dot"></span></div>
+    <div class="strip-item">Aceeași calitate ca-n Amsterdam sau Berlin <span class="strip-dot"></span></div>
+    <div class="strip-item">Doar modele Elite și InLine — niciodată Made for Outlet <span class="strip-dot"></span></div>
+    <div class="strip-item">Produse premium fără prețul premium <span class="strip-dot"></span></div>
+    <div class="strip-item">Modele rare, în tiraje mici <span class="strip-dot"></span></div>
+    <div class="strip-item">Fără restock garantat — dacă-ți place, nu aștepta <span class="strip-dot"></span></div>
+  </div>
+</div>
+
+<!-- ─── SCOUTING PROCESS ─────────────────────────────────────────── -->
+<div class="scouting-section" id="scouting">
+  <div class="scouting-inner">
+    <div class="scouting-grid">
+      <div class="scouting-left">
+        <span class="section-eyebrow">Procesul nostru</span>
+        <h2 class="section-title">Un altfel de magazin de<br><span class="accent">sneakers și îmbrăcăminte.</span></h2>
+        <p class="section-sub">Spre deosebire de alte magazine de sneakers și îmbrăcăminte de profil, noi nu comandăm din catalog. Nimic care să nu ne fi trecut personal prin mână. De peste 15 ani mergem personal în Nike &amp; Adidas Stores din Olanda și Germania, de unde alegem fiecare produs pe care îl vei vedea aici — pentru a ne asigura că aducem într-adevăr produse premium la prețuri de outlet. Tocmai din cauza acestui proces riguros, nu vei găsi la noi stocuri foarte mari. Obiectivul nostru este să-ți oferim acea selecție limitată de produse care sunt într-adevăr un smart premium.</p>
+
+        <div class="scouting-criteria">
+          <div class="criteria-item">
+            <div class="criteria-icon">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div class="criteria-text">
+              <h4>Selectate din brand stores, nu din depozite</h4>
+              <p>Cristi merge personal în Nike &amp; Adidas Store din Vest și alege fiecare model. Nu primim ce ni se trimite — alegem ce merită.</p>
+            </div>
+          </div>
+          <div class="criteria-item">
+            <div class="criteria-icon">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div class="criteria-text">
+              <h4>Doar game Elite &amp; InLine</h4>
+              <p>Niciodată Made-for-Outlet. Aceleași modele și materiale pe care le găsești în Amsterdam sau Berlin.</p>
+            </div>
+          </div>
+          <div class="criteria-item">
+            <div class="criteria-icon">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div class="criteria-text">
+              <h4>Stoc limitat, nu catalog infinit</h4>
+              <p>Aducem tiraje mici. Ce vezi azi, mâine poate nu mai e. Nu pentru că vrem să creăm presiune — ci pentru că așa funcționează scouting-ul.</p>
+            </div>
+          </div>
+          <div class="criteria-item">
+            <div class="criteria-icon">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div class="criteria-text">
+              <h4>Preț premium-inteligent</h4>
+              <p>Calitate de flagship store, la preț de clearance. Pentru că le aducem direct, nu prin intermediari.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scouting-visual">
+        <div class="compare-card">
+          <div class="compare-header">
+            <div class="compare-header-cell">Criteriu</div>
+            <div class="compare-header-cell col-elite">OnlySport ✓</div>
+            <div class="compare-header-cell col-mfo">Alții</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell">Selecție personală în store</div>
+            <div class="compare-cell col-elite"><span class="check">✓</span></div>
+            <div class="compare-cell col-mfo"><span class="cross">✗</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell">Direct din Nike &amp; Adidas Store</div>
+            <div class="compare-cell col-elite"><span class="check">✓</span></div>
+            <div class="compare-cell col-mfo">Distribuitori</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell">Exclusiv Elite &amp; InLine</div>
+            <div class="compare-cell col-elite"><span class="check">✓ Mereu</span></div>
+            <div class="compare-cell col-mfo">Variabil</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell">Fără MFO (Made for Outlet)</div>
+            <div class="compare-cell col-elite"><span class="check">✓ Garantat</span></div>
+            <div class="compare-cell col-mfo"><span class="cross">Nespecificat</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell">Stoc limitat, tiraje mici</div>
+            <div class="compare-cell col-elite"><span class="check">✓</span></div>
+            <div class="compare-cell col-mfo"><span class="cross">✗</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell">Experiență în piață</div>
+            <div class="compare-cell col-elite"><span class="check">+15 ani</span></div>
+            <div class="compare-cell col-mfo">Variabil</div>
+          </div>
+          <div class="compare-footer">
+            <div class="compare-footer-icon">👟</div>
+            <div class="compare-footer-text">Nimic care să nu ne fi trecut personal prin mână. Niciodată din catalog.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── CALITATE: CE NU ȚI SE SPUNE ──────────────────────────────── -->
+<div class="scouting-section" style="background: var(--white); border-top: 1px solid var(--gray-200);">
+  <div class="scouting-inner">
+    <div class="scouting-grid">
+      <div class="scouting-left">
+        <span class="section-eyebrow">Ce trebuie să știi</span>
+        <h2 class="section-title">Ce nu îți spune nimeni despre<br><span class="accent">modelele „100% originale"</span></h2>
+        <p class="section-sub" style="margin-bottom: 28px;"><strong style="color: var(--black);">Toate sunt originale, toate sunt autentice, dar nu toate sunt de calitate.</strong></p>
+        <p style="font-size: 15px; color: var(--gray-500); line-height: 1.8; margin-bottom: 20px;">Brandurile produc două game complet diferite: <strong style="color: var(--black);">Elite &amp; InLine</strong> — modelele din magazine oficiale, cu materiale și construcție de top — și <strong style="color: var(--black);">Made for Outlet (MFO)</strong> — versiuni simplificate, făcute special pentru factory outlet-uri, cu materiale mai ieftine și altă talpă.</p>
+        <p style="font-size: 15px; color: var(--gray-500); line-height: 1.8;">Arată la fel pe raft. Se simt diferit pe picior. Noi aducem doar prima categorie.</p>
+      </div>
+
+      <div class="scouting-visual">
+        <div class="compare-card">
+          <div class="compare-header">
+            <div class="compare-header-cell">Criteriu</div>
+            <div class="compare-header-cell col-elite">Elite &amp; InLine</div>
+            <div class="compare-header-cell col-mfo">Made for Outlet</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell">Materiale superioare</div>
+            <div class="compare-cell col-elite"><span class="check">✓</span></div>
+            <div class="compare-cell col-mfo"><span class="cross">✗</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell">Talpă originală</div>
+            <div class="compare-cell col-elite"><span class="check">✓</span></div>
+            <div class="compare-cell col-mfo"><span class="cross">✗</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell">Construcție de flagship</div>
+            <div class="compare-cell col-elite"><span class="check">✓</span></div>
+            <div class="compare-cell col-mfo"><span class="cross">✗</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell">Disponibil în Nike Store oficial</div>
+            <div class="compare-cell col-elite"><span class="check">✓</span></div>
+            <div class="compare-cell col-mfo"><span class="cross">✗</span></div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell">Longevitate estetică</div>
+            <div class="compare-cell col-elite"><span class="check">✓ Ridicată</span></div>
+            <div class="compare-cell col-mfo">Variabilă</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell">Găsit la OnlySport</div>
+            <div class="compare-cell col-elite"><span class="check">✓ Mereu</span></div>
+            <div class="compare-cell col-mfo"><span class="cross">✗ Niciodată</span></div>
+          </div>
+          <div class="compare-footer">
+            <div class="compare-footer-icon">👟</div>
+            <div class="compare-footer-text">Aducem exclusiv modele Elite &amp; InLine — direct din magazine oficiale din Vest.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── SCOUTED PICKS ─────────────────────────────────────────────── -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-eyebrow">Selecțiile noastre</span>
+    <h2 class="section-title">Scouted <span class="accent">Picks</span></h2>
+    <p class="section-sub">Produse care au făcut selecția. Fiecare cu un motiv clar pentru care e aici.</p>
+  </div>
+  <div class="products-grid" id="picks-grid">
+
+    <!-- Card 1 -->
+    <div class="product-card" onclick="toggleSize(this)">
+      <div class="card-img-wrap">
+        <span class="card-badge badge-pick">Scouted Pick</span>
+        <button class="card-wish" onclick="event.stopPropagation()">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+        <img src="1.png" alt="Adidas X CrazyFast" />
+        <div class="size-overlay" onclick="event.stopPropagation()">
+          <div class="size-overlay-title">Alege mărimea</div>
+          <div class="size-grid">
+            <button class="size-btn" onclick="selectSize(this)">39</button>
+            <button class="size-btn" onclick="selectSize(this)">40</button>
+            <button class="size-btn" onclick="selectSize(this)">41</button>
+            <button class="size-btn out" disabled>42</button>
+            <button class="size-btn" onclick="selectSize(this)">43</button>
+            <button class="size-btn" onclick="selectSize(this)">44</button>
+          </div>
+          <button class="size-confirm" onclick="addToCart(this)">Adaugă în coș</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-brand">Adidas</div>
+        <div class="card-rating"><span class="stars">★★★★★</span><span class="rating-count">(42)</span></div>
+        <div class="card-name">X CrazyFast.1 FG – GY7378</div>
+        <div class="card-editorial">Cel mai rapid cismă de fotbal din linie</div>
+        <div class="card-footer">
+          <div><span class="card-price">800,00 lei</span></div>
+          <button class="card-add" onclick="event.stopPropagation(); this.closest('.product-card').click()">Adaugă</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="product-card" onclick="toggleSize(this)">
+      <div class="card-img-wrap">
+        <span class="card-badge badge-new">Nou</span>
+        <button class="card-wish" onclick="event.stopPropagation()">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+        <img src="2.png" alt="Nike Shox TL" />
+        <div class="size-overlay" onclick="event.stopPropagation()">
+          <div class="size-overlay-title">Alege mărimea</div>
+          <div class="size-grid">
+            <button class="size-btn" onclick="selectSize(this)">38</button>
+            <button class="size-btn" onclick="selectSize(this)">39</button>
+            <button class="size-btn out" disabled>40</button>
+            <button class="size-btn" onclick="selectSize(this)">41</button>
+            <button class="size-btn" onclick="selectSize(this)">42</button>
+            <button class="size-btn" onclick="selectSize(this)">43</button>
+          </div>
+          <button class="size-confirm" onclick="addToCart(this)">Adaugă în coș</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-brand">Nike</div>
+        <div class="card-rating"><span class="stars">★★★★☆</span><span class="rating-count">(28)</span></div>
+        <div class="card-name">Shox TL „Light Bone / Olive Aura"</div>
+        <div class="card-editorial">Iconicul Shox revine cu o colorație discretă</div>
+        <div class="card-footer">
+          <div><span class="card-price">650,00 lei</span></div>
+          <button class="card-add" onclick="event.stopPropagation(); this.closest('.product-card').click()">Adaugă</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="product-card" onclick="toggleSize(this)">
+      <div class="card-img-wrap">
+        <span class="card-badge badge-hot">Popular</span>
+        <button class="card-wish" onclick="event.stopPropagation()">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+        <img src="3.png" alt="Nike Air Force 1" />
+        <div class="size-overlay" onclick="event.stopPropagation()">
+          <div class="size-overlay-title">Alege mărimea</div>
+          <div class="size-grid">
+            <button class="size-btn" onclick="selectSize(this)">40</button>
+            <button class="size-btn" onclick="selectSize(this)">40.5</button>
+            <button class="size-btn" onclick="selectSize(this)">41</button>
+            <button class="size-btn" onclick="selectSize(this)">42</button>
+            <button class="size-btn out" disabled>43</button>
+            <button class="size-btn" onclick="selectSize(this)">44</button>
+          </div>
+          <button class="size-confirm" onclick="addToCart(this)">Adaugă în coș</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-brand">Nike</div>
+        <div class="card-rating"><span class="stars">★★★★★</span><span class="rating-count">(117)</span></div>
+        <div class="card-name">Air Force 1 Low By You „White/Blue"</div>
+        <div class="card-editorial">Clasicul urban în varianta custom albastru</div>
+        <div class="card-footer">
+          <div><span class="card-price">600,00 lei</span></div>
+          <button class="card-add" onclick="event.stopPropagation(); this.closest('.product-card').click()">Adaugă</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="product-card" onclick="toggleSize(this)">
+      <div class="card-img-wrap">
+        <span class="card-badge badge-pick">Top vânzări</span>
+        <button class="card-wish" onclick="event.stopPropagation()">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+        <img src="4.png" alt="Nike Air Force 1" />
+        <div class="size-overlay" onclick="event.stopPropagation()">
+          <div class="size-overlay-title">Alege mărimea</div>
+          <div class="size-grid">
+            <button class="size-btn" onclick="selectSize(this)">39</button>
+            <button class="size-btn" onclick="selectSize(this)">40</button>
+            <button class="size-btn" onclick="selectSize(this)">41</button>
+            <button class="size-btn" onclick="selectSize(this)">42</button>
+            <button class="size-btn" onclick="selectSize(this)">43</button>
+            <button class="size-btn out" disabled>44</button>
+          </div>
+          <button class="size-confirm" onclick="addToCart(this)">Adaugă în coș</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-brand">Nike</div>
+        <div class="card-rating"><span class="stars">★★★★★</span><span class="rating-count">(89)</span></div>
+        <div class="card-name">Air Force 1 Low „White/Green"</div>
+        <div class="card-editorial">Crisp white meets subtle olive — combo perfect</div>
+        <div class="card-footer">
+          <div><span class="card-price">600,00 lei</span></div>
+          <button class="card-add" onclick="event.stopPropagation(); this.closest('.product-card').click()">Adaugă</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="view-all-wrap">
+    <a href="incaltaminte-barbati.html" class="section-link">
+      Vezi toate selecțiile
+      <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</div>
+
+<!-- ─── CURATED COLLECTIONS ───────────────────────────────────────── -->
+<div style="background:var(--gray-50); padding: 96px 0;">
+  <div class="section" style="padding-top:0; padding-bottom:0;">
+    <div class="section-header">
+      <span class="section-eyebrow">Shop by intent</span>
+      <h2 class="section-title">Colecții <span class="accent">curatorate</span></h2>
+      <p class="section-sub">Nu căuta după categorie — caută după intenție. Am organizat selecția după cum poți purta produsele.</p>
+    </div>
+    <div class="collections-grid">
+
+      <div class="collection-card large" style="grid-row: span 2;">
+        <div class="collection-card-inner" style="height:100%; min-height:520px;">
+          <div class="collection-bg" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);"></div>
+          <div class="collection-overlay"></div>
+          <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; padding:40px;">
+            <img src="5.png" alt="Clean Classics" style="width:85%; object-fit:contain; mix-blend-mode:luminosity; filter:drop-shadow(0 20px 60px rgba(0,0,0,.8)); transform:rotate(-5deg);" />
+          </div>
+          <div class="collection-arrow">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+          <div class="collection-content">
+            <div class="collection-tag">Bestseller collection</div>
+            <div class="collection-name">Clean Classics</div>
+            <div class="collection-count">234 produse disponibile</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collection-card">
+        <div class="collection-card-inner">
+          <div class="collection-bg" style="background: linear-gradient(135deg, #1a0a00 0%, #3d1a00 100%);"></div>
+          <div class="collection-overlay"></div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-end;padding:20px;overflow:hidden;">
+            <img src="1.png" alt="Sport Performance" style="width:65%; object-fit:contain; mix-blend-mode:luminosity; filter:drop-shadow(0 10px 30px rgba(0,0,0,.6)); transform:rotate(-8deg) translateY(10px);" />
+          </div>
+          <div class="collection-arrow">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+          <div class="collection-content">
+            <div class="collection-tag">Sport & Performance</div>
+            <div class="collection-name">Everyday Essentials</div>
+            <div class="collection-count">189 produse</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collection-card">
+        <div class="collection-card-inner">
+          <div class="collection-bg" style="background: linear-gradient(135deg, #0a1a00 0%, #1a3d00 100%);"></div>
+          <div class="collection-overlay"></div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-end;padding:20px;overflow:hidden;">
+            <img src="4.png" alt="Best Value" style="width:65%; object-fit:contain; mix-blend-mode:luminosity; filter:drop-shadow(0 10px 30px rgba(0,0,0,.6)); transform:rotate(-8deg) translateY(10px);" />
+          </div>
+          <div class="collection-arrow">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+          <div class="collection-content">
+            <div class="collection-tag">Smart picks</div>
+            <div class="collection-name">Best Value Picks</div>
+            <div class="collection-count">312 produse</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collection-card" style="grid-column: span 2;">
+        <div class="collection-card-inner" style="aspect-ratio: auto; height: 200px;">
+          <div class="collection-bg" style="background: linear-gradient(90deg, #0a0a0a 0%, #1a1a1a 100%);"></div>
+          <div class="collection-overlay"></div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-end;padding:40px;gap:20px;overflow:hidden;">
+            <img src="2.png" alt="Rare Finds" style="height:140%; object-fit:contain; mix-blend-mode:luminosity; filter:drop-shadow(0 10px 30px rgba(0,0,0,.6)); transform:rotate(-5deg); margin-top:-20%; margin-right:5%;" />
+            <img src="3.png" alt="Rare Finds" style="height:110%; object-fit:contain; mix-blend-mode:luminosity; filter:drop-shadow(0 10px 30px rgba(0,0,0,.6)); transform:rotate(3deg); margin-top:-5%;" />
+          </div>
+          <div class="collection-arrow">
+            <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+          <div class="collection-content">
+            <div class="collection-tag">Curatorie strictă</div>
+            <div class="collection-name">Elevated Basics — Piese care merită atenția</div>
+            <div class="collection-count">442 produse disponibile</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ─── NEW ARRIVALS ──────────────────────────────────────────────── -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-eyebrow">Fresh finds</span>
+    <h2 class="section-title">Ultimele produse care<br>au <span class="accent">făcut selecția</span></h2>
+    <p class="section-sub">Scouting-ul nu se oprește. Uite ce a intrat recent în catalog.</p>
+  </div>
+  <div class="products-grid products-grid-3">
+
+    <div class="product-card" onclick="toggleSize(this)">
+      <div class="card-img-wrap">
+        <span class="card-badge badge-new">New</span>
+        <button class="card-wish" onclick="event.stopPropagation()">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+        <img src="5.png" alt="Nike Air Force 1" />
+        <div class="size-overlay" onclick="event.stopPropagation()">
+          <div class="size-overlay-title">Alege mărimea</div>
+          <div class="size-grid">
+            <button class="size-btn" onclick="selectSize(this)">40</button>
+            <button class="size-btn" onclick="selectSize(this)">41</button>
+            <button class="size-btn" onclick="selectSize(this)">42</button>
+            <button class="size-btn" onclick="selectSize(this)">43</button>
+          </div>
+          <button class="size-confirm" onclick="addToCart(this)">Adaugă în coș</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-brand">Nike</div>
+        <div class="card-rating"><span class="stars">★★★★★</span><span class="rating-count">(31)</span></div>
+        <div class="card-name">Air Force 1 Low „White/Green" – HF0650-900</div>
+        <div class="card-editorial">Tonal green swoosh pe canvas alb imaculat</div>
+        <div class="card-footer">
+          <div><span class="card-price">600,00 lei</span></div>
+          <button class="card-add" onclick="event.stopPropagation(); this.closest('.product-card').click()">Adaugă</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" onclick="toggleSize(this)">
+      <div class="card-img-wrap">
+        <span class="card-badge badge-new">New</span>
+        <button class="card-wish" onclick="event.stopPropagation()">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+        <img src="6.png" alt="Nike Air Force 1 Triple Black" />
+        <div class="size-overlay" onclick="event.stopPropagation()">
+          <div class="size-overlay-title">Alege mărimea</div>
+          <div class="size-grid">
+            <button class="size-btn" onclick="selectSize(this)">39</button>
+            <button class="size-btn" onclick="selectSize(this)">40</button>
+            <button class="size-btn out" disabled>41</button>
+            <button class="size-btn" onclick="selectSize(this)">42</button>
+            <button class="size-btn" onclick="selectSize(this)">43</button>
+          </div>
+          <button class="size-confirm" onclick="addToCart(this)">Adaugă în coș</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-brand">Nike</div>
+        <div class="card-rating"><span class="stars">★★★★★</span><span class="rating-count">(64)</span></div>
+        <div class="card-name">Air Force 1 Low BG Triple Black</div>
+        <div class="card-editorial">All-black execution. Niciun compromis vizual.</div>
+        <div class="card-footer">
+          <div><span class="card-price">600,00 lei</span></div>
+          <button class="card-add" onclick="event.stopPropagation(); this.closest('.product-card').click()">Adaugă</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" onclick="toggleSize(this)">
+      <div class="card-img-wrap">
+        <span class="card-badge badge-pick">Scouted Pick</span>
+        <button class="card-wish" onclick="event.stopPropagation()">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+        <img src="7.png" alt="Nike Air Force 1 Gray" />
+        <div class="size-overlay" onclick="event.stopPropagation()">
+          <div class="size-overlay-title">Alege mărimea</div>
+          <div class="size-grid">
+            <button class="size-btn" onclick="selectSize(this)">40</button>
+            <button class="size-btn" onclick="selectSize(this)">41</button>
+            <button class="size-btn" onclick="selectSize(this)">42</button>
+            <button class="size-btn" onclick="selectSize(this)">43</button>
+            <button class="size-btn" onclick="selectSize(this)">44</button>
+          </div>
+          <button class="size-confirm" onclick="addToCart(this)">Adaugă în coș</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-brand">Nike</div>
+        <div class="card-rating"><span class="stars">★★★★☆</span><span class="rating-count">(19)</span></div>
+        <div class="card-name">Air Force 1 Gray/Gray/Black – HV0659 900</div>
+        <div class="card-editorial">Tonal grey. Versatil. Fără efort.</div>
+        <div class="card-footer">
+          <div><span class="card-price">600,00 lei</span></div>
+          <button class="card-add" onclick="event.stopPropagation(); this.closest('.product-card').click()">Adaugă</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="view-all-wrap">
+    <a href="incaltaminte-barbati.html" class="section-link">
+      Explorează toate noutățile
+      <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</div>
+
+<!-- ─── EDITORIAL SPOTLIGHT ──────────────────────────────────────── -->
+<div class="editorial-section">
+  <div class="editorial-inner">
+    <div class="editorial-grid">
+      <div class="editorial-img-wrap">
+        <img src="3.png" alt="Nike Air Force 1 White Blue" />
+        <div class="editorial-shoe-num">01</div>
+      </div>
+      <div class="editorial-content">
+        <span class="section-eyebrow">Why it made the cut</span>
+        <h2 class="editorial-title">De ce ne-a atras<br>atenția <span class="accent">Air Force 1</span></h2>
+        <p class="editorial-body">Nike Air Force 1 nu e un pantof — e un document de design care a supraviețuit 40 de ani fără modificări majore. Versiunea White/Blue pe care o găsești la noi e una dintre cele mai echilibrate colorații din linie: crisp, versatilă, imposibil de purtat greșit.</p>
+        <div class="editorial-reasons">
+          <div class="editorial-reason">
+            <svg class="editorial-reason-icon" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <div class="editorial-reason-text"><strong>Design atemporal.</strong> 40 de ani în catalog fără să arate datat — rar pentru orice produs, indiferent de industrie.</div>
+          </div>
+          <div class="editorial-reason">
+            <svg class="editorial-reason-icon" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <div class="editorial-reason-text"><strong>Versatilitate maximă.</strong> Se poartă cu orice — de la jogger la pantalon clasic. Nu necesită un look construit în jurul lor.</div>
+          </div>
+          <div class="editorial-reason">
+            <svg class="editorial-reason-icon" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <div class="editorial-reason-text"><strong>Smart premium value.</strong> La 600 lei, e un produs cu o valoare estetică și de construcție care justifică complet prețul.</div>
+          </div>
+        </div>
+        <div class="editorial-price-row">
+          <div class="editorial-price">600,00 lei</div>
+          <div class="editorial-price-badge">Smart Premium Pick</div>
+        </div>
+        <a href="incaltaminte-barbati.html" class="editorial-cta">
+          Vezi produsul
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── BRAND PHILOSOPHY ──────────────────────────────────────────── -->
+<div class="philosophy-section">
+  <div class="philosophy-inner">
+    <div class="philosophy-grid">
+      <div class="philosophy-content">
+        <span class="section-eyebrow">Cine suntem</span>
+        <h2 class="section-title" style="text-align:left;">Selecție ghidată,<br>nu <span class="accent">raft de marfă</span></h2>
+        <div class="philosophy-quote">
+          „Nu urmărim volum. Căutăm produse care merită locul lor."
+        </div>
+        <p class="philosophy-body">OnlySport a pornit dintr-o frustrare simplă: prea multe site-uri de sneakers listează orice, lăsând clientul să sorteze singur tonele de zgomot. Noi am ales altfel.<br><br>
+        Fiecare produs din catalog a trecut printr-un filtru editorial strict. Nu e marketing — e o promisiune operațională. Dacă e în site, e pentru că merită să fie.</p>
+        <a href="#" class="philosophy-cta">
+          Află povestea noastră
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="philosophy-stats">
+        <div class="philosophy-stat">
+          <div class="philosophy-stat-num">1177<span>+</span></div>
+          <div class="philosophy-stat-label">Produse selectate atent din mii evaluate</div>
+        </div>
+        <div class="philosophy-stat">
+          <div class="philosophy-stat-num">100<span>%</span></div>
+          <div class="philosophy-stat-label">Autentice — verificate la fiecare intrare în stoc</div>
+        </div>
+        <div class="philosophy-stat">
+          <div class="philosophy-stat-num">2<span>+</span></div>
+          <div class="philosophy-stat-label">Branduri premium în portofoliu: Nike & Adidas</div>
+        </div>
+        <div class="philosophy-stat">
+          <div class="philosophy-stat-num">93<span>%</span></div>
+          <div class="philosophy-stat-label">Scorul mediu de selecție al produselor din catalog</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── SOCIAL PROOF ──────────────────────────────────────────────── -->
+<div class="section" style="background: var(--white);">
+  <div class="section-header">
+    <span class="section-eyebrow">Ce spun clienții</span>
+    <h2 class="section-title">Selecția<br><span class="accent">apreciată</span> în realitate</h2>
+    <p class="section-sub">Nu reviews-uri generate — experiențe reale de la oameni care au cumpărat și purtat.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-top">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div class="review-avatar">AM</div>
+          <div>
+            <div class="review-name">Alexandru M.</div>
+            <div class="review-date">Martie 2025</div>
+          </div>
+        </div>
+        <div class="review-verified">✓ Verificat</div>
+      </div>
+      <div class="review-stars">★★★★★</div>
+      <div class="review-product">Nike Air Force 1 White/Blue</div>
+      <p class="review-text">Am comandat cu mici emoții prima dată, dar produsul a sosit exact ca în poze. <strong>Autenticitatea se simte imediat</strong> — calitate solidă, nu replică. Livrarea a fost rapidă, ambalaj îngrijit.</p>
+    </div>
+    <div class="review-card">
+      <div class="review-top">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div class="review-avatar">RD</div>
+          <div>
+            <div class="review-name">Radu D.</div>
+            <div class="review-date">Februarie 2025</div>
+          </div>
+        </div>
+        <div class="review-verified">✓ Verificat</div>
+      </div>
+      <div class="review-stars">★★★★★</div>
+      <div class="review-product">Adidas X CrazyFast.1 FG</div>
+      <p class="review-text">Cel mai bun site de sneakers din România pe care l-am găsit. <strong>Selecția e diferită față de orice altceva</strong> — simți că cineva a ales cu cap, nu a listat tot ce există pe piață.</p>
+    </div>
+    <div class="review-card">
+      <div class="review-top">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div class="review-avatar">MI</div>
+          <div>
+            <div class="review-name">Mihai I.</div>
+            <div class="review-date">Ianuarie 2025</div>
+          </div>
+        </div>
+        <div class="review-verified">✓ Verificat</div>
+      </div>
+      <div class="review-stars">★★★★☆</div>
+      <div class="review-product">Nike Shox TL Olive Aura</div>
+      <p class="review-text">Pantofii au ajuns în 2 zile, în cutia originală sigilată. Calitate excelentă. <strong>Recomand cu încredere</strong> — am mai comandat de 3 ori și nu am avut nicio problemă.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── REASSURANCE ───────────────────────────────────────────────── -->
+<div class="reassurance-strip">
+  <div class="reassurance-inner">
+    <div class="reassurance-item">
+      <div class="reassurance-icon">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+      </div>
+      <div>
+        <div class="reassurance-title">Livrare gratuită</div>
+        <div class="reassurance-desc">Comenzi de peste 300 Lei. Livrare în 1–3 zile lucrătoare în toată România.</div>
+      </div>
+    </div>
+    <div class="reassurance-item">
+      <div class="reassurance-icon">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      </div>
+      <div>
+        <div class="reassurance-title">100% Autentice</div>
+        <div class="reassurance-desc">Fiecare produs este verificat la intrarea în stoc. Nicio replică, niciodată.</div>
+      </div>
+    </div>
+    <div class="reassurance-item">
+      <div class="reassurance-icon">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+      </div>
+      <div>
+        <div class="reassurance-title">Retur 30 de zile</div>
+        <div class="reassurance-desc">Produs nepotrivit? Returnezi simplu, fără bătăi de cap, în 30 de zile.</div>
+      </div>
+    </div>
+    <div class="reassurance-item">
+      <div class="reassurance-icon">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+      </div>
+      <div>
+        <div class="reassurance-title">Plată securizată</div>
+        <div class="reassurance-desc">Card, transfer, ramburs. Tranzacții criptate SSL. Datele tale sunt în siguranță.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── NEWSLETTER ────────────────────────────────────────────────── -->
+<div class="newsletter-section">
+  <div class="newsletter-inner">
+    <span class="newsletter-eyebrow">Fii primul</span>
+    <h2 class="newsletter-title">Intră primul în noile selecții</h2>
+    <p class="newsletter-sub">Nu trimitem spam. Trimitem selecții noi, drops exclusive și ocazional câte un „why it made the cut" editorial. Când vrei, te dezabonezi.</p>
+    <div class="newsletter-form">
+      <input type="email" class="newsletter-input" placeholder="adresa@ta@email.ro" />
+      <button class="newsletter-btn">Abonează-te</button>
+    </div>
+    <p class="newsletter-note">Prin abonare ești de acord cu <a href="#">Politica de Confidențialitate</a>. No spam, ever.</p>
+  </div>
+</div>
+
+<!-- ─── FOOTER ────────────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-mark" style="margin-bottom:20px;">
+          <span>Only</span>
+          <span>Sport</span>
+        </div>
+        <p class="footer-tagline">Sneakers & clothing selectate atent pentru cei care caută mai puțin zgomot și alegeri mai bune.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" title="Facebook">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-btn" title="Instagram">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-btn" title="TikTok">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigare</div>
+        <div class="footer-links">
+          <a href="incaltaminte-barbati.html" class="footer-link">Încălțăminte Bărbați</a>
+          <a href="#" class="footer-link">Încălțăminte Femei</a>
+          <a href="#" class="footer-link">Încălțăminte Copii</a>
+          <a href="#" class="footer-link">Îmbrăcăminte</a>
+          <a href="#" class="footer-link">Branduri</a>
+          <a href="#" class="footer-link">Noutăți</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Informații</div>
+        <div class="footer-links">
+          <a href="#" class="footer-link">Despre Noi</a>
+          <a href="#" class="footer-link">Cum comand?</a>
+          <a href="#" class="footer-link">Transport și livrare</a>
+          <a href="#" class="footer-link">Cum returnez un produs?</a>
+          <a href="#" class="footer-link">Metodă de plată</a>
+          <a href="#" class="footer-link">Termeni și Condiții</a>
+          <a href="#" class="footer-link">Politica de Confidențialitate</a>
+          <a href="#" class="footer-link">ANPC</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <div class="footer-contact-text">Str. Revoluției Nr. 3,<br>Târgu Mureș</div>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <div class="footer-contact-text">+40 752 210 622</div>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <div class="footer-contact-text">office@onlysport.ro</div>
+        </div>
+        <div style="margin-top:16px;">
+          <div class="footer-col-title" style="margin-bottom:10px;">Program</div>
+          <div class="footer-contact-text" style="color:rgba(255,255,255,.45); font-size:13px; line-height:1.8;">
+            Luni – Vineri: 10:00 – 19:00<br>
+            Sâmbătă: 10:00 – 14:00
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 <span>OnlySport</span>. Toate drepturile rezervate.</div>
+      <div class="footer-legal">
+        <a href="#">Termeni</a>
+        <a href="#">Confidențialitate</a>
+        <a href="#">Cookies</a>
+      </div>
+      <div class="footer-payments">
+        <span class="pay-chip">VISA</span>
+        <span class="pay-chip">Mastercard</span>
+        <span class="pay-chip">PayU</span>
+        <span class="pay-chip">Ramburs</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ─── SIZE OVERLAY LOGIC ────────────────────────────────────────
+  function toggleSize(card) {
+    const overlay = card.querySelector('.size-overlay');
+    const isActive = overlay.classList.contains('active');
+    document.querySelectorAll('.size-overlay.active').forEach(o => {
+      o.classList.remove('active');
+      o.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+      o.querySelector('.size-confirm').classList.remove('ready');
+    });
+    if (!isActive) overlay.classList.add('active');
+  }
+
+  function selectSize(btn) {
+    const grid = btn.closest('.size-grid');
+    grid.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    const confirm = btn.closest('.size-overlay').querySelector('.size-confirm');
+    confirm.classList.add('ready');
+  }
+
+  function addToCart(btn) {
+    if (!btn.classList.contains('ready')) return;
+    const overlay = btn.closest('.size-overlay');
+    const selected = overlay.querySelector('.size-btn.selected');
+    const size = selected ? selected.textContent : '';
+    btn.textContent = `✓ Adăugat (${size})`;
+    btn.style.background = '#28b828';
+    setTimeout(() => {
+      overlay.classList.remove('active');
+      btn.textContent = 'Adaugă în coș';
+      btn.style.background = '';
+      overlay.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.remove('ready');
+      const badge = document.querySelector('.cart-badge');
+      badge.textContent = parseInt(badge.textContent) + 1;
+    }, 1200);
+  }
+
+  // Close overlay on outside click
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.product-card')) {
+      document.querySelectorAll('.size-overlay.active').forEach(o => {
+        o.classList.remove('active');
+        o.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+        o.querySelector('.size-confirm').classList.remove('ready');
+      });
+    }
+  });
+
+  // ─── SCROLL ANIMATIONS ─────────────────────────────────────────
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.product-card, .review-card, .philosophy-stat, .criteria-item, .collection-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity .5s ease, transform .5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>

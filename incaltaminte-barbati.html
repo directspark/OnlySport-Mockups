@@ -1,0 +1,2535 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Încălțăminte pentru Bărbați | OnlySport</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    /* â”€â”€â”€ RESET & BASE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black:   #0A0A0A;
+      --white:   #FFFFFF;
+      --accent:  #FF4B33;       /* lime green */
+      --accent2: #FF3B30;       /* red for badges / sale */
+      --gray-50: #FAFAFA;
+      --gray-100:#F4F4F5;
+      --gray-200:#E4E4E7;
+      --gray-400:#A1A1AA;
+      --gray-500:#71717A;
+      --gray-700:#3F3F46;
+      --gray-900:#18181B;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+      --shadow-hover: 0 12px 40px rgba(0,0,0,.14), 0 4px 12px rgba(0,0,0,.08);
+      --transition: .2s cubic-bezier(.4,0,.2,1);
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--white);
+      color: var(--black);
+      font-size: 14px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    input { font-family: inherit; }
+    ul { list-style: none; }
+
+    /* â”€â”€â”€ TOP BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .topbar {
+      background: var(--accent);
+      color: rgba(255,255,255,.9);
+      font-size: 11.5px;
+      font-weight: 400;
+      letter-spacing: .02em;
+      padding: 9px 0;
+    }
+    .topbar-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .topbar-left { display: flex; align-items: center; gap: 20px; }
+    .topbar-item { display: flex; align-items: center; gap: 6px; }
+    .topbar-item svg { opacity: .6; }
+    .topbar-center {
+      display: flex; align-items: center; gap: 8px;
+      font-weight: 500; color: rgba(255,255,255,.9); letter-spacing: .04em;
+      font-size: 11px; text-transform: uppercase;
+    }
+    .topbar-center svg { color: rgba(255,255,255,.9); }
+    .topbar-right { display: flex; align-items: center; gap: 6px; }
+    .shipping-badge {
+      background: rgba(255,255,255,.2);
+      border: 1px solid rgba(255,255,255,.4);
+      color: var(--white);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+
+    /* â”€â”€â”€ NAVBAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .navbar {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 12px rgba(0,0,0,.06);
+    }
+    .navbar-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      height: 66px;
+      gap: 40px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      flex-shrink: 0;
+    }
+    .logo-mark {
+      width: 48px;
+      height: 48px;
+      background: var(--black);
+      border-radius: var(--radius-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 8px;
+    }
+    .logo-mark span:first-child {
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+    .logo-mark span:last-child {
+      color: var(--accent);
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-top: 2px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      flex: 1;
+    }
+    .nav-link {
+      padding: 8px 14px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--gray-700);
+      border-radius: var(--radius-sm);
+      transition: background var(--transition), color var(--transition);
+      display: flex; align-items: center; gap: 4px;
+      white-space: nowrap;
+    }
+    .nav-link:hover { background: var(--gray-100); color: var(--black); }
+    .nav-link.active { color: var(--black); font-weight: 600; }
+    .nav-link svg { opacity: .5; transition: opacity var(--transition); }
+    .nav-link:hover svg { opacity: .8; }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .nav-action-btn {
+      width: 38px; height: 38px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: var(--radius-sm);
+      color: var(--gray-700);
+      transition: background var(--transition), color var(--transition);
+      position: relative;
+    }
+    .nav-action-btn:hover { background: var(--gray-100); color: var(--black); }
+    .cart-badge {
+      position: absolute;
+      top: 4px; right: 4px;
+      background: var(--accent2);
+      color: white;
+      font-size: 9px;
+      font-weight: 700;
+      width: 15px; height: 15px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      line-height: 1;
+    }
+
+    /* â”€â”€â”€ POSITIONING STRIP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .positioning-strip { background: var(--black); overflow: hidden; }
+    .strip-track { display: flex; animation: marquee 120s linear infinite; width: max-content; }
+    .strip-item { display: flex; align-items: center; gap: 10px; padding: 12px 28px; white-space: nowrap; font-size: 11.5px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--white); flex-shrink: 0; }
+    .strip-dot { width: 4px; height: 4px; background: rgba(255,255,255,.4); border-radius: 50%; }
+    @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+    /* â”€â”€â”€ PAGE HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .page-hero {
+      background-color: #FFFFFF;
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18'%3E%3Ccircle cx='9' cy='9' r='0.8' fill='%23888888' opacity='0.4'/%3E%3C/svg%3E");
+      background-size: 18px 18px;
+      padding: 48px 40px 44px;
+      border-bottom: 2px solid var(--gray-200);
+    }
+    .page-hero-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .breadcrumb {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 11.5px;
+      color: rgba(0,0,0,.4);
+      margin-bottom: 14px;
+      letter-spacing: .03em;
+    }
+    .breadcrumb a { color: rgba(0,0,0,.4); transition: color var(--transition); }
+    .breadcrumb a:hover { color: rgba(0,0,0,.75); }
+    .breadcrumb-sep { opacity: .3; }
+    .breadcrumb .current { color: rgba(0,0,0,.65); }
+    .page-title {
+      font-size: clamp(28px, 3.5vw, 48px);
+      font-weight: 800;
+      color: var(--black);
+      letter-spacing: -.02em;
+      line-height: 1.1;
+    }
+    .page-title span { color: var(--accent); }
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .hero-stat {
+      text-align: right;
+    }
+    .hero-stat-num {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--black);
+      line-height: 1;
+      letter-spacing: -.02em;
+    }
+    .hero-stat-label {
+      font-size: 11px;
+      color: rgba(0,0,0,.4);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    /* â”€â”€â”€ MAIN LAYOUT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .main-wrapper {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 32px 40px 64px;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    /* â”€â”€â”€ SIDEBAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .sidebar {
+      position: sticky;
+      top: 82px;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+    }
+    .sidebar-header {
+      padding: 20px 20px 16px;
+      border-bottom: 1px solid var(--gray-100);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .sidebar-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--gray-900);
+    }
+    .filter-clear {
+      font-size: 11.5px;
+      color: var(--gray-400);
+      font-weight: 500;
+      cursor: pointer;
+      transition: color var(--transition);
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .filter-clear:hover { color: var(--accent2); background: rgba(255,59,48,.06); }
+
+    .filter-group {
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .filter-group:last-child { border-bottom: none; }
+    .filter-group-header {
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+      transition: background var(--transition);
+    }
+    .filter-group-header:hover { background: var(--gray-50); }
+    .filter-group-name {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--gray-900);
+    }
+    .filter-group-chevron {
+      color: var(--gray-400);
+      transition: transform var(--transition);
+    }
+    .filter-group.open .filter-group-chevron { transform: rotate(180deg); }
+    .filter-group-body {
+      display: none;
+      padding: 4px 20px 16px;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .filter-group.open .filter-group-body { display: flex; }
+
+    /* Custom checkboxes */
+    .filter-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 8px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: background var(--transition);
+    }
+    .filter-option:hover { background: var(--gray-50); }
+    .filter-option input[type="checkbox"] { display: none; }
+    .filter-check {
+      width: 16px; height: 16px;
+      border: 1.5px solid var(--gray-300, #D1D5DB);
+      border-radius: 4px;
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      transition: all var(--transition);
+      background: var(--white);
+    }
+    .filter-option input:checked + .filter-check {
+      background: var(--black);
+      border-color: var(--black);
+    }
+    .filter-option input:checked + .filter-check::after {
+      content: '';
+      width: 9px; height: 6px;
+      border-left: 2px solid var(--white);
+      border-bottom: 2px solid var(--white);
+      transform: rotate(-45deg) translateY(-1px);
+      display: block;
+    }
+    .filter-label {
+      font-size: 13px;
+      color: var(--gray-700);
+      flex: 1;
+      line-height: 1.3;
+    }
+    .filter-count {
+      font-size: 11px;
+      color: var(--gray-400);
+      background: var(--gray-100);
+      padding: 1px 6px;
+      border-radius: 10px;
+    }
+
+    /* Size filter — pill style */
+    .size-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      padding: 4px 20px 16px;
+    }
+    .size-pill {
+      height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--gray-700);
+      cursor: pointer;
+      transition: all var(--transition);
+      user-select: none;
+    }
+    .size-pill:hover { border-color: var(--gray-700); color: var(--black); }
+    .size-pill.selected {
+      background: var(--black);
+      border-color: var(--black);
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    /* Price range */
+    .price-range-wrap {
+      padding: 4px 20px 16px;
+    }
+    .price-inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .price-input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .price-input-label {
+      font-size: 10px;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-weight: 600;
+    }
+    .price-input {
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      padding: 7px 10px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--black);
+      outline: none;
+      transition: border var(--transition);
+      width: 100%;
+    }
+    .price-input:focus { border-color: var(--black); }
+
+    /* Color filter */
+    .color-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 4px 20px 16px;
+    }
+    .color-swatch {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all var(--transition);
+      position: relative;
+    }
+    .color-swatch:hover { transform: scale(1.15); }
+    .color-swatch.selected {
+      border-color: var(--black);
+      box-shadow: 0 0 0 3px var(--white), 0 0 0 5px var(--black);
+    }
+    .color-swatch[title]::after {
+      content: attr(title);
+      position: absolute;
+      bottom: calc(100% + 6px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--black);
+      color: var(--white);
+      font-size: 10px;
+      padding: 3px 7px;
+      border-radius: 4px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition);
+    }
+    .color-swatch:hover::after { opacity: 1; }
+
+    /* â”€â”€â”€ PRODUCT AREA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .product-area { min-width: 0; }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .toolbar-left {
+      display: flex; align-items: center; gap: 16px;
+    }
+    .results-count {
+      font-size: 13px;
+      color: var(--gray-500);
+    }
+    .results-count strong { color: var(--black); font-weight: 600; }
+    .active-filters {
+      display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
+    }
+    .filter-tag {
+      display: flex; align-items: center; gap: 5px;
+      background: var(--black);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: .02em;
+    }
+    .filter-tag button {
+      color: rgba(255,255,255,.6);
+      font-size: 13px;
+      line-height: 1;
+      padding: 0;
+      transition: color var(--transition);
+    }
+    .filter-tag button:hover { color: var(--white); }
+
+    .toolbar-right {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .sort-select {
+      appearance: none;
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      padding: 8px 32px 8px 12px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--black);
+      background: var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2371717A' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 10px center;
+      cursor: pointer;
+      outline: none;
+      transition: border var(--transition);
+    }
+    .sort-select:focus { border-color: var(--black); }
+    .view-toggles {
+      display: flex; align-items: center;
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+    .view-btn {
+      width: 34px; height: 34px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gray-400);
+      transition: all var(--transition);
+    }
+    .view-btn:hover { background: var(--gray-50); color: var(--black); }
+    .view-btn.active { background: var(--black); color: var(--white); }
+
+    /* â”€â”€â”€ PRODUCT GRID â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-3px);
+      border-color: transparent;
+    }
+
+    /* Badges */
+    .card-badges {
+      position: absolute;
+      top: 12px; left: 12px;
+      display: flex; flex-direction: column; gap: 5px;
+      z-index: 2;
+    }
+    .badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .badge-new { background: var(--black); color: var(--white); }
+    .badge-sale { background: var(--accent2); color: var(--white); }
+    .badge-hot { background: var(--accent); color: var(--white); }
+
+    /* Wishlist button */
+    .card-wishlist {
+      position: absolute;
+      top: 10px; right: 10px;
+      z-index: 2;
+      width: 34px; height: 34px;
+      background: rgba(255,255,255,.9);
+      backdrop-filter: blur(8px);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gray-400);
+      transition: all var(--transition);
+      opacity: 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .product-card:hover .card-wishlist { opacity: 1; }
+    .card-wishlist:hover { color: var(--accent2); transform: scale(1.1); }
+    .card-wishlist.active { color: var(--accent2); opacity: 1; }
+
+    /* Image area */
+    .card-img-wrap {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: #F5F5F5;
+    }
+    .card-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: contain;
+      padding: 20px;
+      transition: transform .4s cubic-bezier(.4,0,.2,1);
+      mix-blend-mode: multiply;
+    }
+    .product-card:hover .card-img-wrap img { transform: scale(1.07); }
+
+    /* Quick actions overlay */
+    .card-quick-actions {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 12px;
+      background: linear-gradient(to top, rgba(0,0,0,.5) 0%, transparent 100%);
+      display: flex;
+      justify-content: center;
+      transform: translateY(100%);
+      transition: transform var(--transition);
+    }
+    .product-card:hover .card-quick-actions { transform: translateY(0); }
+    .quick-view-btn {
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(8px);
+      color: var(--black);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .04em;
+      padding: 8px 20px;
+      border-radius: 20px;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+    .quick-view-btn:hover { background: var(--white); box-shadow: var(--shadow-md); }
+
+    /* Card body */
+    .card-body {
+      padding: 14px 16px 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-brand {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--gray-400);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .card-name {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--black);
+      line-height: 1.35;
+      margin-bottom: 8px;
+      flex: 1;
+      /* Two lines max */
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .card-code {
+      font-size: 10.5px;
+      color: var(--gray-400);
+      font-family: 'SF Mono', 'Fira Code', monospace;
+    }
+    .card-sizes {
+      font-size: 11.5px;
+      color: var(--gray-400);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    .card-sizes strong {
+      color: var(--gray-500);
+      font-weight: 600;
+    }
+    .card-labels {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 4px;
+      margin-bottom: 10px;
+    }
+    .card-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .label-trail    { background: #FFF3E0; color: #E65100; border: 1px solid #FFB74D40; }
+    .label-road     { background: #E3F2FD; color: #1565C0; border: 1px solid #90CAF940; }
+    .label-breath   { background: #E8F5E9; color: #2E7D32; border: 1px solid #A5D6A740; }
+    .label-street   { background: #F3E5F5; color: #6A1B9A; border: 1px solid #CE93D840; }
+    .label-gazon    { background: #E8F5E9; color: #1B5E20; border: 1px solid #81C78440; }
+    .label-laceless { background: #E8EAF6; color: #283593; border: 1px solid #9FA8DA40; }
+    .label-ultra    { background: #FFF8E1; color: #F57F17; border: 1px solid #FFD54F40; }
+    .label-waterproof { background: #E1F5FE; color: #01579B; border: 1px solid #81D4FA40; }
+    .label-premium    { background: #FBF0E9; color: #7B3F1A; border: 1px solid #D4956040; }
+    @media (max-width: 768px) {
+      .card-label { font-size: 9px; padding: 2px 6px; }
+    }
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .card-price {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+    .price-current {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--black);
+      letter-spacing: -.02em;
+      line-height: 1;
+    }
+    .price-original {
+      font-size: 11.5px;
+      color: var(--gray-400);
+      text-decoration: line-through;
+    }
+    .price-currency {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gray-500);
+      margin-left: 2px;
+    }
+    .btn-add-cart {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--black);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      padding: 9px 14px;
+      border-radius: var(--radius-sm);
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+    .btn-add-cart:hover {
+      background: var(--accent);
+      color: var(--white);
+      transform: scale(1.03);
+    }
+    .btn-add-cart svg { transition: transform var(--transition); }
+    .btn-add-cart:hover svg { transform: translateX(2px); }
+
+    /* â”€â”€â”€ SIZE OVERLAY â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .size-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 10;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(8px);
+      border-radius: var(--radius-md);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 18px 20px;
+      gap: 10px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--transition);
+    }
+    .size-overlay.visible {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .so-close {
+      position: absolute;
+      top: 10px; right: 10px;
+      width: 30px; height: 30px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gray-500);
+      border-radius: 50%;
+      transition: background var(--transition), color var(--transition);
+    }
+    .so-close:hover { background: var(--gray-100); color: var(--black); }
+    .so-price {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--black);
+      letter-spacing: -.03em;
+    }
+    .so-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      margin-top: 2px;
+    }
+    .so-selected {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--black);
+      min-height: 16px;
+      transition: opacity var(--transition);
+    }
+    .so-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      margin: 2px 0;
+    }
+    .so-pill {
+      min-width: 42px; height: 36px;
+      padding: 0 10px;
+      display: flex; align-items: center; justify-content: center;
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gray-700);
+      cursor: pointer;
+      user-select: none;
+      transition: all var(--transition);
+    }
+    .so-pill:hover { border-color: var(--gray-700); color: var(--black); }
+    .so-pill.selected {
+      background: var(--black);
+      border-color: var(--black);
+      color: var(--white);
+      font-weight: 700;
+    }
+    .so-confirm {
+      width: 100%;
+      padding: 12px;
+      background: var(--black);
+      color: var(--white);
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      border-radius: var(--radius-sm);
+      margin-top: 4px;
+      transition: background var(--transition), opacity var(--transition), color var(--transition);
+      opacity: .3;
+      cursor: not-allowed;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+    }
+    .so-confirm.ready {
+      opacity: 1;
+      cursor: pointer;
+    }
+    .so-confirm.ready:hover {
+      background: var(--accent);
+      color: var(--black);
+    }
+    .so-hint {
+      font-size: 11px;
+      color: var(--gray-400);
+      text-align: center;
+    }
+
+    /* â”€â”€â”€ PAGINATION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .pagination-wrap {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .pagination-info {
+      font-size: 12.5px;
+      color: var(--gray-400);
+    }
+    .pagination {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .page-btn {
+      min-width: 38px; height: 38px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gray-700);
+      transition: all var(--transition);
+      padding: 0 6px;
+    }
+    .page-btn:hover { background: var(--gray-100); color: var(--black); }
+    .page-btn.active {
+      background: var(--black);
+      color: var(--white);
+      font-weight: 700;
+    }
+    .page-btn.arrow {
+      color: var(--gray-400);
+      border: 1.5px solid var(--gray-200);
+    }
+    .page-btn.arrow:hover { border-color: var(--black); color: var(--black); }
+    .page-dots {
+      font-size: 13px;
+      color: var(--gray-400);
+      padding: 0 4px;
+    }
+
+    /* â”€â”€â”€ FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    footer {
+      background: var(--gray-900);
+      color: rgba(255,255,255,.6);
+      margin-top: 48px;
+    }
+    .footer-top {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 56px 40px 48px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 48px;
+    }
+    .footer-brand {}
+    .footer-logo-wrap {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 20px;
+    }
+    .footer-logo-mark {
+      width: 40px; height: 40px;
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 5px 7px;
+    }
+    .footer-logo-mark span:first-child {
+      color: var(--black); font-size: 9px; font-weight: 800;
+      letter-spacing: .12em; text-transform: uppercase; line-height: 1;
+    }
+    .footer-logo-mark span:last-child {
+      color: var(--accent); font-size: 7px; font-weight: 700;
+      letter-spacing: .18em; text-transform: uppercase; line-height: 1; margin-top: 2px;
+    }
+    .footer-tagline { font-size: 14px; font-weight: 600; color: var(--white); }
+    .footer-desc {
+      font-size: 13px; line-height: 1.7;
+      margin-bottom: 20px;
+      max-width: 300px;
+    }
+    .footer-highlights { display: flex; flex-direction: column; gap: 10px; }
+    .footer-highlight {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 13px;
+    }
+    .fh-icon {
+      width: 30px; height: 30px;
+      background: rgba(255,255,255,.06);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .footer-col-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a {
+      font-size: 13px;
+      transition: color var(--transition);
+    }
+    .footer-links a:hover { color: var(--white); }
+
+    .footer-contact-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+    .fci-icon {
+      width: 28px; height: 28px;
+      background: rgba(255,255,255,.06);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .fci-text strong {
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: rgba(255,255,255,.35);
+      margin-bottom: 2px;
+    }
+    .social-links {
+      display: flex; gap: 8px;
+      margin-top: 20px;
+    }
+    .social-link {
+      width: 36px; height: 36px;
+      background: rgba(255,255,255,.06);
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      transition: all var(--transition);
+    }
+    .social-link:hover { background: rgba(255,255,255,.12); color: var(--white); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+    .footer-bottom-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .footer-copy {
+      font-size: 12px;
+      color: rgba(255,255,255,.3);
+    }
+    .footer-badges { display: flex; gap: 8px; align-items: center; }
+    .anpc-badge {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 6px;
+      padding: 5px 10px;
+      font-size: 10px;
+      font-weight: 600;
+      color: rgba(255,255,255,.4);
+      letter-spacing: .04em;
+    }
+    .footer-payments { display: flex; gap: 6px; align-items: center; }
+    .payment-icon {
+      height: 22px; padding: 3px 6px;
+      background: rgba(255,255,255,.06);
+      border-radius: 4px;
+      font-size: 9px;
+      font-weight: 800;
+      color: rgba(255,255,255,.4);
+      display: flex; align-items: center;
+      letter-spacing: .04em;
+    }
+    /* â”€â”€â”€ MOBILE FILTER DRAWER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    .mobile-bar {
+      display: none;
+      position: sticky;
+      top: 66px;
+      z-index: 90;
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 10px 16px;
+      gap: 8px;
+      align-items: center;
+    }
+    .mobile-bar-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      height: 40px;
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--black);
+      background: var(--white);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .mobile-bar-btn:hover { border-color: var(--black); }
+    .mobile-bar-btn.primary { background: var(--black); color: var(--white); border-color: var(--black); }
+    .mobile-bar-btn .badge-count {
+      background: var(--accent);
+      color: var(--white);
+      font-size: 10px;
+      font-weight: 700;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .drawer-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.5);
+      z-index: 200;
+      backdrop-filter: blur(2px);
+    }
+    .drawer-overlay.open { display: block; }
+    .filter-drawer {
+      position: fixed;
+      left: 0; top: 0; bottom: 0;
+      width: min(85vw, 340px);
+      background: var(--white);
+      z-index: 201;
+      transform: translateX(-100%);
+      transition: transform .3s cubic-bezier(.4,0,.2,1);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .filter-drawer.open { transform: translateX(0); }
+    .drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--gray-200);
+      position: sticky;
+      top: 0;
+      background: var(--white);
+      z-index: 1;
+    }
+    .drawer-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--black);
+      letter-spacing: -.01em;
+    }
+    .drawer-close {
+      width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: var(--radius-sm);
+      color: var(--gray-500);
+      transition: all var(--transition);
+    }
+    .drawer-close:hover { background: var(--gray-100); color: var(--black); }
+    .drawer-body { flex: 1; padding-bottom: 100px; }
+    .drawer-footer {
+      position: sticky;
+      bottom: 0;
+      background: var(--white);
+      border-top: 1px solid var(--gray-200);
+      padding: 14px 20px;
+      display: flex;
+      gap: 10px;
+    }
+    .drawer-footer-btn {
+      flex: 1; height: 44px;
+      border-radius: var(--radius-sm);
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .drawer-footer-btn.reset { background: var(--white); color: var(--gray-700); border: 1.5px solid var(--gray-200); }
+    .drawer-footer-btn.apply { background: var(--black); color: var(--white); border: none; }
+    .drawer-footer-btn.apply:hover { background: var(--accent); }
+
+    /* Sort bottom sheet */
+    .sort-sheet {
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      background: var(--white);
+      border-radius: 20px 20px 0 0;
+      z-index: 201;
+      transform: translateY(100%);
+      transition: transform .3s cubic-bezier(.4,0,.2,1);
+      padding: 0 0 32px;
+    }
+    .sort-sheet.open { transform: translateY(0); }
+    .sort-sheet-handle { width: 36px; height: 4px; background: var(--gray-200); border-radius: 2px; margin: 12px auto 16px; }
+    .sort-sheet-title { font-size: 14px; font-weight: 700; color: var(--black); padding: 0 20px 12px; border-bottom: 1px solid var(--gray-100); }
+    .sort-option {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 20px;
+      font-size: 14px;
+      color: var(--gray-700);
+      cursor: pointer;
+      transition: background var(--transition);
+      border-bottom: 1px solid var(--gray-100);
+    }
+    .sort-option:hover { background: var(--gray-50); }
+    .sort-option.active { color: var(--black); font-weight: 600; }
+    .sort-option.active::after { content: 'âś“'; color: var(--accent); font-weight: 800; }
+
+    /* â”€â”€â”€ RESPONSIVE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+    @media (max-width: 768px) {
+
+      /* Previne overflow orizontal global */
+      html, body { overflow-x: hidden; max-width: 100vw; }
+      * { box-sizing: border-box; }
+
+      /* Top bar — ascuns pe mobil, prea aglomerat */
+      .topbar { display: none; }
+
+      /* Navbar */
+      .navbar { width: 100%; }
+      .navbar-inner { padding: 0 14px; height: 56px; gap: 8px; max-width: 100%; }
+      .nav-links { display: none; }
+      .nav-action-btn { width: 36px; height: 36px; flex-shrink: 0; }
+      .logo-mark { width: 42px; height: 42px; }
+
+      /* Page hero */
+      .page-hero { padding: 20px 14px 18px; width: 100%; }
+      .page-hero-inner { flex-direction: column; align-items: flex-start; gap: 14px; }
+      .page-title { font-size: 26px; }
+      .hero-meta { gap: 16px; }
+      .hero-stat-num { font-size: 20px; }
+      .hero-stat-label { font-size: 10px; }
+      .breadcrumb { font-size: 11px; }
+
+      /* Mobile bar */
+      .mobile-bar { display: flex; width: 100%; padding: 10px 14px; }
+
+      /* Main layout */
+      .main-wrapper {
+        grid-template-columns: 1fr;
+        padding: 12px 14px 48px;
+        gap: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+      .sidebar { display: none; }
+
+      /* Toolbar */
+      .toolbar { margin-bottom: 12px; flex-wrap: nowrap; }
+      .toolbar-left { min-width: 0; overflow: hidden; }
+      .toolbar-left .results-count { font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .active-filters { display: none; }
+      .toolbar-right .sort-select { display: none; }
+      .toolbar-right .view-toggles { display: none; }
+
+      /* Product grid — 2 columns strict */
+      .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        width: 100%;
+      }
+
+      /* Cards */
+      .product-card { min-width: 0; width: 100%; }
+      .card-body { padding: 8px 10px 10px; }
+      .card-brand { font-size: 9px; letter-spacing: .06em; }
+      .card-name { font-size: 11.5px; -webkit-line-clamp: 2; }
+      .card-sizes { font-size: 10px; line-height: 1.4; margin-bottom: 8px; }
+      .card-meta { display: none; }
+      .card-footer { gap: 6px; }
+      .card-price .price-current { font-size: 13px; }
+      .card-price .price-currency { font-size: 10px; }
+      .card-price .price-original { display: none; }
+      .btn-add-cart { font-size: 10px; padding: 7px 8px; gap: 4px; white-space: nowrap; flex-shrink: 0; }
+      .btn-add-cart svg { width: 12px; height: 12px; flex-shrink: 0; }
+      .card-wishlist { opacity: 1; width: 28px; height: 28px; top: 6px; right: 6px; }
+      .card-img-wrap img { padding: 10px; }
+      .badge { font-size: 9px; padding: 2px 6px; }
+
+      /* Size overlay */
+      .size-overlay-inner { padding: 12px; border-radius: 12px 12px 0 0; }
+      .so-pill { min-width: 34px; height: 32px; font-size: 12px; padding: 0 8px; }
+
+      /* Pagination */
+      .pagination-wrap { margin-top: 24px; }
+      .page-btn { min-width: 32px; height: 32px; font-size: 12px; }
+
+      /* Footer */
+      .footer-top { grid-template-columns: 1fr; gap: 28px; padding: 36px 14px 28px; }
+      .footer-bottom-inner { flex-direction: column; align-items: flex-start; padding: 14px; gap: 10px; }
+    }
+
+    @media (max-width: 380px) {
+      .navbar-inner { padding: 0 10px; }
+      .page-hero { padding: 16px 10px; }
+      .main-wrapper { padding: 10px 10px 40px; }
+      .mobile-bar { padding: 8px 10px; }
+      .product-grid { gap: 8px; }
+      .card-name { font-size: 10.5px; }
+      .btn-add-cart { padding: 6px 6px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- â•â•â• TOP BAR â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <div class="topbar-item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6 19.79 19.79 0 0 1 1.64 5a2 2 0 0 1 1.95-2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 5.61 5.62l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +40 752 210 622
+      </div>
+      <div class="topbar-item">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Str. Revoluției Nr. 3, Târgu Mureș
+      </div>
+    </div>
+    <div class="topbar-center">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      Livrare gratuită pentru comenzi de minimum 300 Lei
+    </div>
+    <div class="topbar-right">
+      <div class="shipping-badge">FREE SHIPPING 300+</div>
+    </div>
+  </div>
+</div>
+
+<!-- â•â•â• NAVBAR â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="#" class="logo" style="font-size: 22px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; color: var(--black);">ONLYSPORT</a>
+
+    <ul class="nav-links">
+      <li><a href="#" class="nav-link">Acasă</a></li>
+      <li><a href="#" class="nav-link">Branduri
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </a></li>
+      <li><a href="#" class="nav-link active">Încălțăminte Bărbați
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </a></li>
+      <li><a href="#" class="nav-link">Încălțăminte Femei
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </a></li>
+      <li><a href="#" class="nav-link">Încălțăminte Copii
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </a></li>
+      <li><a href="#" class="nav-link">Îmbrăcăminte
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="nav-action-btn" title="Căutare">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="nav-action-btn" title="Cont">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <button class="nav-action-btn" title="Favorite">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </button>
+      <button class="nav-action-btn" title="Coș" style="position:relative">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-badge">3</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- â•â•â• PAGE HERO â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div>
+      <div class="breadcrumb">
+        <a href="#">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="current">Încălțăminte pentru Bărbați</span>
+      </div>
+      <h1 class="page-title">Încălțăminte<br><span>pentru Bărbați</span></h1>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-stat">
+        <div class="hero-stat-num">1,177</div>
+        <div class="hero-stat-label">Produse</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">99</div>
+        <div class="hero-stat-label">Pagini</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- â•â•â• POSITIONING STRIP â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div class="positioning-strip">
+  <div class="strip-track">
+    <div class="strip-item">Alegem personal fiecare produs <span class="strip-dot"></span></div>
+    <div class="strip-item">Direct din magazine Nike &amp; Adidas, nu din depozite <span class="strip-dot"></span></div>
+    <div class="strip-item">Aceeași calitate ca-n Amsterdam sau Berlin <span class="strip-dot"></span></div>
+    <div class="strip-item">Doar modele Elite și InLine — niciodată Made for Outlet <span class="strip-dot"></span></div>
+    <div class="strip-item">Produse premium fără prețul premium <span class="strip-dot"></span></div>
+    <div class="strip-item">Modele rare, în tiraje mici <span class="strip-dot"></span></div>
+    <div class="strip-item">Fără restock garantat — dacă-ți place, nu aștepta <span class="strip-dot"></span></div>
+    <!-- Duplicate for seamless loop -->
+    <div class="strip-item">Alegem personal fiecare produs <span class="strip-dot"></span></div>
+    <div class="strip-item">Direct din magazine Nike &amp; Adidas, nu din depozite <span class="strip-dot"></span></div>
+    <div class="strip-item">Aceeași calitate ca-n Amsterdam sau Berlin <span class="strip-dot"></span></div>
+    <div class="strip-item">Doar modele Elite și InLine — niciodată Made for Outlet <span class="strip-dot"></span></div>
+    <div class="strip-item">Produse premium fără prețul premium <span class="strip-dot"></span></div>
+    <div class="strip-item">Modele rare, în tiraje mici <span class="strip-dot"></span></div>
+    <div class="strip-item">Fără restock garantat — dacă-ți place, nu aștepta <span class="strip-dot"></span></div>
+  </div>
+</div>
+
+<!-- â•â•â• MOBILE BAR â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div class="mobile-bar" id="mobileBar">
+  <button class="mobile-bar-btn" onclick="openFilterDrawer()">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="20" y2="12"/><line x1="12" y1="18" x2="20" y2="18"/></svg>
+    Filtre
+    <span class="badge-count" id="filterBadge" style="display:none">0</span>
+  </button>
+  <button class="mobile-bar-btn primary" onclick="openSortSheet()">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 6h18M6 12h12M10 18h4"/></svg>
+    Sortează
+  </button>
+</div>
+
+<!-- â•â•â• FILTER DRAWER â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeFilterDrawer()"></div>
+<div class="filter-drawer" id="filterDrawer">
+  <div class="drawer-header">
+    <span class="drawer-title">Filtre</span>
+    <button class="drawer-close" onclick="closeFilterDrawer()">
+      <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body" id="drawerBody">
+    <!-- Conținutul drawer-ului va fi populat din sidebar via JS -->
+  </div>
+  <div class="drawer-footer">
+    <button class="drawer-footer-btn reset" onclick="clearFilters(); closeFilterDrawer()">Resetează</button>
+    <button class="drawer-footer-btn apply" onclick="closeFilterDrawer()">Aplică filtrele</button>
+  </div>
+</div>
+
+<!-- â•â•â• SORT BOTTOM SHEET â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div class="drawer-overlay" id="sortOverlay" onclick="closeSortSheet()"></div>
+<div class="sort-sheet" id="sortSheet">
+  <div class="sort-sheet-handle"></div>
+  <div class="sort-sheet-title">Sortează după</div>
+  <div class="sort-option active" onclick="selectSort(this, 'recomandate')">Recomandate</div>
+  <div class="sort-option" onclick="selectSort(this, 'nou')">Cele mai noi</div>
+  <div class="sort-option" onclick="selectSort(this, 'pret-asc')">Preț: mic â†’ mare</div>
+  <div class="sort-option" onclick="selectSort(this, 'pret-desc')">Preț: mare â†’ mic</div>
+  <div class="sort-option" onclick="selectSort(this, 'popular')">Cele mai populare</div>
+</div>
+
+<!-- â•â•â• MAIN â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div class="main-wrapper">
+
+  <!-- â”€â”€â”€ SIDEBAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <span class="sidebar-title">Filtre</span>
+      <span class="filter-clear" onclick="clearFilters()">Resetează</span>
+    </div>
+
+    <!-- Mă‚RIMI -->
+    <div class="filter-group open" id="group-marimi">
+      <div class="filter-group-header" onclick="toggleGroup('group-marimi')">
+        <span class="filter-group-name">Mărimi</span>
+        <svg class="filter-group-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+      </div>
+      <div class="size-grid">
+        <div class="size-pill selected" onclick="toggleSize(this)">34</div>
+        <div class="size-pill" onclick="toggleSize(this)">35</div>
+        <div class="size-pill" onclick="toggleSize(this)">35.5</div>
+        <div class="size-pill" onclick="toggleSize(this)">36</div>
+        <div class="size-pill" onclick="toggleSize(this)">36.5</div>
+        <div class="size-pill" onclick="toggleSize(this)">37</div>
+        <div class="size-pill" onclick="toggleSize(this)">38</div>
+        <div class="size-pill" onclick="toggleSize(this)">39</div>
+        <div class="size-pill" onclick="toggleSize(this)">40</div>
+        <div class="size-pill" onclick="toggleSize(this)">41</div>
+        <div class="size-pill" onclick="toggleSize(this)">42</div>
+        <div class="size-pill" onclick="toggleSize(this)">43</div>
+        <div class="size-pill" onclick="toggleSize(this)">44</div>
+        <div class="size-pill" onclick="toggleSize(this)">45</div>
+        <div class="size-pill" onclick="toggleSize(this)">46</div>
+        <div class="size-pill" onclick="toggleSize(this)">47</div>
+      </div>
+    </div>
+
+    <!-- PREȚ -->
+    <div class="filter-group open" id="group-pret">
+      <div class="filter-group-header" onclick="toggleGroup('group-pret')">
+        <span class="filter-group-name">Preț</span>
+        <svg class="filter-group-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+      </div>
+      <div class="price-range-wrap">
+        <div class="price-inputs">
+          <div class="price-input-group">
+            <span class="price-input-label">De la</span>
+            <input type="number" class="price-input" value="200" placeholder="200">
+          </div>
+          <div class="price-input-group">
+            <span class="price-input-label">Până la</span>
+            <input type="number" class="price-input" value="1500" placeholder="1500">
+          </div>
+        </div>
+        <div class="filter-options-list">
+          <label class="filter-option">
+            <input type="checkbox" checked>
+            <div class="filter-check"></div>
+            <span class="filter-label">200 – 299 Lei</span>
+            <span class="filter-count">43</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox">
+            <div class="filter-check"></div>
+            <span class="filter-label">300 – 499 Lei</span>
+            <span class="filter-count">218</span>
+          </label>
+          <label class="filter-option">
+            <input type="checkbox">
+            <div class="filter-check"></div>
+            <span class="filter-label">Peste 500 Lei</span>
+            <span class="filter-count">916</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- BRAND -->
+    <div class="filter-group open" id="group-brand">
+      <div class="filter-group-header" onclick="toggleGroup('group-brand')">
+        <span class="filter-group-name">Brand</span>
+        <svg class="filter-group-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+      </div>
+      <div class="filter-group-body">
+        <label class="filter-option">
+          <input type="checkbox" checked>
+          <div class="filter-check"></div>
+          <span class="filter-label">Nike</span>
+          <span class="filter-count">934</span>
+        </label>
+        <label class="filter-option">
+          <input type="checkbox">
+          <div class="filter-check"></div>
+          <span class="filter-label">Adidas</span>
+          <span class="filter-count">243</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- SPORT -->
+    <div class="filter-group open" id="group-sport">
+      <div class="filter-group-header" onclick="toggleGroup('group-sport')">
+        <span class="filter-group-name">Sport</span>
+        <svg class="filter-group-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+      </div>
+      <div class="filter-group-body">
+        <label class="filter-option">
+          <input type="checkbox">
+          <div class="filter-check"></div>
+          <span class="filter-label">Alergare</span>
+          <span class="filter-count">312</span>
+        </label>
+        <label class="filter-option">
+          <input type="checkbox">
+          <div class="filter-check"></div>
+          <span class="filter-label">Baschet</span>
+          <span class="filter-count">87</span>
+        </label>
+        <label class="filter-option">
+          <input type="checkbox">
+          <div class="filter-check"></div>
+          <span class="filter-label">Fitness</span>
+          <span class="filter-count">156</span>
+        </label>
+        <label class="filter-option">
+          <input type="checkbox">
+          <div class="filter-check"></div>
+          <span class="filter-label">Fotbal Gazon FG</span>
+          <span class="filter-count">64</span>
+        </label>
+        <label class="filter-option">
+          <input type="checkbox">
+          <div class="filter-check"></div>
+          <span class="filter-label">Fotbal Gazon Mixte SG</span>
+          <span class="filter-count">28</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- COLECȚII -->
+    <div class="filter-group" id="group-colectii">
+      <div class="filter-group-header" onclick="toggleGroup('group-colectii')">
+        <span class="filter-group-name">Colecții</span>
+        <svg class="filter-group-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+      </div>
+      <div class="filter-group-body">
+        <label class="filter-option">
+          <input type="checkbox">
+          <div class="filter-check"></div>
+          <span class="filter-label">Jordan</span>
+          <span class="filter-count">145</span>
+        </label>
+        <label class="filter-option">
+          <input type="checkbox">
+          <div class="filter-check"></div>
+          <span class="filter-label">Air Force I</span>
+          <span class="filter-count">298</span>
+        </label>
+        <label class="filter-option">
+          <input type="checkbox">
+          <div class="filter-check"></div>
+          <span class="filter-label">Air Max</span>
+          <span class="filter-count">203</span>
+        </label>
+        <label class="filter-option">
+          <input type="checkbox">
+          <div class="filter-check"></div>
+          <span class="filter-label">VaporMax</span>
+          <span class="filter-count">67</span>
+        </label>
+        <label class="filter-option">
+          <input type="checkbox">
+          <div class="filter-check"></div>
+          <span class="filter-label">Huarache</span>
+          <span class="filter-count">54</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- TIP -->
+    <div class="filter-group" id="group-tip">
+      <div class="filter-group-header" onclick="toggleGroup('group-tip')">
+        <span class="filter-group-name">Tip</span>
+        <svg class="filter-group-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+      </div>
+      <div class="filter-group-body">
+        <label class="filter-option">
+          <input type="checkbox" checked>
+          <div class="filter-check"></div>
+          <span class="filter-label">Sport</span>
+          <span class="filter-count">689</span>
+        </label>
+        <label class="filter-option">
+          <input type="checkbox">
+          <div class="filter-check"></div>
+          <span class="filter-label">Casual</span>
+          <span class="filter-count">488</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- MATERIAL -->
+    <div class="filter-group" id="group-material">
+      <div class="filter-group-header" onclick="toggleGroup('group-material')">
+        <span class="filter-group-name">Material</span>
+        <svg class="filter-group-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+      </div>
+      <div class="filter-group-body">
+        <label class="filter-option">
+          <input type="checkbox">
+          <div class="filter-check"></div>
+          <span class="filter-label">Nylon / Fas</span>
+          <span class="filter-count">312</span>
+        </label>
+        <label class="filter-option">
+          <input type="checkbox">
+          <div class="filter-check"></div>
+          <span class="filter-label">Pânză</span>
+          <span class="filter-count">198</span>
+        </label>
+        <label class="filter-option">
+          <input type="checkbox">
+          <div class="filter-check"></div>
+          <span class="filter-label">Piele</span>
+          <span class="filter-count">421</span>
+        </label>
+        <label class="filter-option">
+          <input type="checkbox">
+          <div class="filter-check"></div>
+          <span class="filter-label">Sintetic</span>
+          <span class="filter-count">246</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- CULOARE -->
+    <div class="filter-group" id="group-culoare">
+      <div class="filter-group-header" onclick="toggleGroup('group-culoare')">
+        <span class="filter-group-name">Culoare</span>
+        <svg class="filter-group-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+      </div>
+      <div class="color-grid">
+        <div class="color-swatch selected" style="background:#FFFFFF; border: 1.5px solid #e4e4e7;" title="Alb" onclick="toggleSwatch(this)"></div>
+        <div class="color-swatch" style="background:#1B3A4B;" title="Verde Închis" onclick="toggleSwatch(this)"></div>
+        <div class="color-swatch" style="background:#4CAF50;" title="Verde" onclick="toggleSwatch(this)"></div>
+        <div class="color-swatch" style="background:#00BCD4;" title="Turquoise" onclick="toggleSwatch(this)"></div>
+        <div class="color-swatch" style="background:#E91E63;" title="Roz" onclick="toggleSwatch(this)"></div>
+        <div class="color-swatch" style="background:#000000;" title="Negru" onclick="toggleSwatch(this)"></div>
+        <div class="color-swatch" style="background:#2196F3;" title="Albastru" onclick="toggleSwatch(this)"></div>
+        <div class="color-swatch" style="background:#FF5722;" title="Portocaliu" onclick="toggleSwatch(this)"></div>
+        <div class="color-swatch" style="background:#9C27B0;" title="Violet" onclick="toggleSwatch(this)"></div>
+        <div class="color-swatch" style="background:#9E9E9E;" title="Gri" onclick="toggleSwatch(this)"></div>
+      </div>
+    </div>
+
+    <!-- GEN -->
+    <div class="filter-group" id="group-gen">
+      <div class="filter-group-header" onclick="toggleGroup('group-gen')">
+        <span class="filter-group-name">Gen</span>
+        <svg class="filter-group-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+      </div>
+      <div class="filter-group-body">
+        <label class="filter-option">
+          <input type="checkbox" checked>
+          <div class="filter-check"></div>
+          <span class="filter-label">Bărbați</span>
+          <span class="filter-count">1177</span>
+        </label>
+        <label class="filter-option">
+          <input type="checkbox">
+          <div class="filter-check"></div>
+          <span class="filter-label">Femei</span>
+          <span class="filter-count">834</span>
+        </label>
+        <label class="filter-option">
+          <input type="checkbox">
+          <div class="filter-check"></div>
+          <span class="filter-label">Copii</span>
+          <span class="filter-count">412</span>
+        </label>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- â”€â”€â”€ PRODUCT AREA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+  <div class="product-area">
+
+    <!-- TOOLBAR -->
+    <div class="toolbar">
+      <div class="toolbar-left">
+        <span class="results-count">Se afișează <strong>1–12</strong> din <strong>1,177</strong> produse</span>
+        <div class="active-filters">
+          <div class="filter-tag">Nike <button onclick="this.parentElement.remove()">×</button></div>
+          <div class="filter-tag">Mărimea 34 <button onclick="this.parentElement.remove()">×</button></div>
+          <div class="filter-tag">200–299 Lei <button onclick="this.parentElement.remove()">×</button></div>
+        </div>
+      </div>
+      <div class="toolbar-right">
+        <select class="sort-select">
+          <option>Recomandate</option>
+          <option>Preț crescător</option>
+          <option>Preț descrescător</option>
+          <option>Cele mai noi</option>
+          <option>Cele mai populare</option>
+        </select>
+        <div class="view-toggles">
+          <button class="view-btn active" title="Grilă">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          </button>
+          <button class="view-btn" title="Listă">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT GRID -->
+    <div class="product-grid">
+
+      <!-- Card 1 -->
+      <div class="product-card">
+        <div class="card-badges">
+          <span class="badge badge-new">Nou</span>
+        </div>
+        <button class="card-wishlist" onclick="toggleWishlist(this)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+        <div class="card-img-wrap">
+          <img src="1.png" alt="Adidas X CrazyFast" loading="lazy" />
+          <div class="card-quick-actions">
+            <button class="quick-view-btn">Vizualizare rapidă</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-brand">Adidas</div>
+          <div class="card-name">X CrazyFast.1 FG – GY7378</div>
+          <div class="card-sizes"><strong>Disponibil:</strong> 39, 40, 41, 42, 43, 44, 45</div>
+          <div class="card-labels">
+            <span class="card-label label-gazon">Gazon natural</span>
+            <span class="card-label label-laceless">Laceless</span>
+            <span class="card-label label-ultra">Ultra-ușoare</span>
+          </div>
+          <div class="card-meta">
+            <span class="card-code">GY7378</span>
+          </div>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-current">800<span class="price-currency">Lei</span></span>
+            </div>
+            <button class="btn-add-cart">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              Adaugă
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="product-card">
+        <div class="card-badges">
+          <span class="badge badge-hot">Popular</span>
+        </div>
+        <button class="card-wishlist active" onclick="toggleWishlist(this)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+        <div class="card-img-wrap">
+          <img src="2.png" alt="Nike Shox TL" loading="lazy" />
+          <div class="card-quick-actions">
+            <button class="quick-view-btn">Vizualizare rapidă</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-brand">Nike</div>
+          <div class="card-name">Shox TL Light Bone / Olive Aura</div>
+          <div class="card-sizes"><strong>Disponibil:</strong> 38, 39, 40, 41, 42, 43, 44</div>
+          <div class="card-labels">
+            <span class="card-label label-breath">Respirabil</span>
+          </div>
+          <div class="card-meta">
+            <span class="card-code">FV9939-002</span>
+          </div>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-current">650<span class="price-currency">Lei</span></span>
+            </div>
+            <button class="btn-add-cart">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              Adaugă
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="product-card">
+        <div class="card-badges">
+          <span class="badge badge-sale">–15%</span>
+        </div>
+        <button class="card-wishlist" onclick="toggleWishlist(this)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+        <div class="card-img-wrap">
+          <img src="3.png" alt="Nike Air Force 1" loading="lazy" />
+          <div class="card-quick-actions">
+            <button class="quick-view-btn">Vizualizare rapidă</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-brand">Nike</div>
+          <div class="card-name">Air Force 1 Low By You White/Blue</div>
+          <div class="card-sizes"><strong>Disponibil:</strong> 40, 40.5, 41, 42, 44</div>
+          <div class="card-labels"><span class="card-label label-street">Street Icon</span></div>
+          <div class="card-meta">
+            <span class="card-code">HF0659-900</span>
+          </div>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-current">510<span class="price-currency">Lei</span></span>
+              <span class="price-original">600 Lei</span>
+            </div>
+            <button class="btn-add-cart">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              Adaugă
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="product-card">
+        <button class="card-wishlist" onclick="toggleWishlist(this)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+        <div class="card-img-wrap">
+          <img src="4.png" alt="Nike Air Force 1 Gray/Green" loading="lazy" />
+          <div class="card-quick-actions">
+            <button class="quick-view-btn">Vizualizare rapidă</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-brand">Nike</div>
+          <div class="card-name">Air Force 1 Low By You Gray/Green</div>
+          <div class="card-sizes"><strong>Disponibil:</strong> 39, 40, 41, 42, 43, 45</div>
+          <div class="card-labels"><span class="card-label label-street">Street Icon</span></div>
+          <div class="card-meta">
+            <span class="card-code">HF0659-900</span>
+          </div>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-current">600<span class="price-currency">Lei</span></span>
+            </div>
+            <button class="btn-add-cart">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              Adaugă
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="product-card">
+        <div class="card-badges">
+          <span class="badge badge-new">Nou</span>
+        </div>
+        <button class="card-wishlist" onclick="toggleWishlist(this)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+        <div class="card-img-wrap">
+          <img src="13.webp" alt="Air Jordan 1 High Latte" loading="lazy" />
+          <div class="card-quick-actions">
+            <button class="quick-view-btn">Vizualizare rapidă</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-brand">Nike</div>
+          <div class="card-name">Air Jordan 1 High Latte</div>
+          <div class="card-sizes"><strong>Disponibil:</strong> 38, 39, 40, 41, 42, 43, 44, 45</div>
+          <div class="card-labels">
+            <span class="card-label label-street">Street Icon</span>
+            <span class="card-label label-premium">Piele premium / Nubuc</span>
+          </div>
+          <div class="card-meta">
+            <span class="card-code">FD2596-021</span>
+          </div>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-current">600<span class="price-currency">Lei</span></span>
+            </div>
+            <button class="btn-add-cart">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              Adaugă
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="product-card">
+        <button class="card-wishlist" onclick="toggleWishlist(this)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+        <div class="card-img-wrap">
+          <img src="6.png" alt="Nike Air Force 1 Triple Black" loading="lazy" />
+          <div class="card-quick-actions">
+            <button class="quick-view-btn">Vizualizare rapidă</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-brand">Nike</div>
+          <div class="card-name">Air Force 1 LX BQ Triple Black</div>
+          <div class="card-sizes"><strong>Disponibil:</strong> 39, 40, 41, 42, 43, 44</div>
+          <div class="card-labels"><span class="card-label label-street">Street Icon</span></div>
+          <div class="card-meta">
+            <span class="card-code">HV0659-900</span>
+          </div>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-current">600<span class="price-currency">Lei</span></span>
+            </div>
+            <button class="btn-add-cart">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              Adaugă
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="product-card">
+        <div class="card-badges">
+          <span class="badge badge-sale">–10%</span>
+        </div>
+        <button class="card-wishlist" onclick="toggleWishlist(this)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+        <div class="card-img-wrap">
+          <img src="7.png" alt="Nike Air Force 1 Gray/Black" loading="lazy" />
+          <div class="card-quick-actions">
+            <button class="quick-view-btn">Vizualizare rapidă</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-brand">Nike</div>
+          <div class="card-name">Air Force 1 Gray/Gray/Black</div>
+          <div class="card-sizes"><strong>Disponibil:</strong> 40, 41, 42, 43, 44, 45</div>
+          <div class="card-labels"><span class="card-label label-street">Street Icon</span></div>
+          <div class="card-meta">
+            <span class="card-code">HV0659-900</span>
+          </div>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-current">540<span class="price-currency">Lei</span></span>
+              <span class="price-original">600 Lei</span>
+            </div>
+            <button class="btn-add-cart">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              Adaugă
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="product-card">
+        <button class="card-wishlist" onclick="toggleWishlist(this)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+        <div class="card-img-wrap">
+          <img src="8.png" alt="Nike Air Force 1 Gray/Black" loading="lazy" />
+          <div class="card-quick-actions">
+            <button class="quick-view-btn">Vizualizare rapidă</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-brand">Nike</div>
+          <div class="card-name">Air Force 1 Gray/Black</div>
+          <div class="card-sizes"><strong>Disponibil:</strong> 39, 40, 41, 42, 43</div>
+          <div class="card-labels"><span class="card-label label-street">Street Icon</span></div>
+          <div class="card-meta">
+            <span class="card-code">HV0659-900</span>
+          </div>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-current">600<span class="price-currency">Lei</span></span>
+            </div>
+            <button class="btn-add-cart">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              Adaugă
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="product-card">
+        <div class="card-badges">
+          <span class="badge badge-new">Nou</span>
+        </div>
+        <button class="card-wishlist" onclick="toggleWishlist(this)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+        <div class="card-img-wrap">
+          <img src="9.png" alt="Nike Air Force 1 White/Blue" loading="lazy" />
+          <div class="card-quick-actions">
+            <button class="quick-view-btn">Vizualizare rapidă</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-brand">Nike</div>
+          <div class="card-name">Air Force 1 White/Blue</div>
+          <div class="card-sizes"><strong>Disponibil:</strong> 38, 39, 40, 41, 42, 43, 44, 45</div>
+          <div class="card-labels"><span class="card-label label-street">Street Icon</span></div>
+          <div class="card-meta">
+            <span class="card-code">HV0659-900</span>
+          </div>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-current">600<span class="price-currency">Lei</span></span>
+            </div>
+            <button class="btn-add-cart">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              Adaugă
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 10 -->
+      <div class="product-card">
+        <button class="card-wishlist" onclick="toggleWishlist(this)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+        <div class="card-img-wrap">
+          <img src="10.png" alt="Nike Air Force 1 Gore-Tex" loading="lazy" />
+          <div class="card-quick-actions">
+            <button class="quick-view-btn">Vizualizare rapidă</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-brand">Nike</div>
+          <div class="card-name">Air Force 1 Low Gore-Tex Phantom</div>
+          <div class="card-sizes"><strong>Disponibil:</strong> 40, 40.5, 41, 42, 43, 44, 45</div>
+          <div class="card-labels"><span class="card-label label-street">Street Icon</span></div>
+          <div class="card-meta">
+            <span class="card-code">CK2630-004</span>
+          </div>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-current">650<span class="price-currency">Lei</span></span>
+            </div>
+            <button class="btn-add-cart">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              Adaugă
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 11 -->
+      <div class="product-card">
+        <div class="card-badges">
+          <span class="badge badge-hot">Top vânzări</span>
+        </div>
+        <button class="card-wishlist" onclick="toggleWishlist(this)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+        <div class="card-img-wrap">
+          <img src="11.png" alt="Nike Infinity RN 4 Gore-Tex" loading="lazy" />
+          <div class="card-quick-actions">
+            <button class="quick-view-btn">Vizualizare rapidă</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-brand">Nike</div>
+          <div class="card-name">Infinity RN 4 Gore-Tex</div>
+          <div class="card-sizes"><strong>Disponibil:</strong> 38, 39, 40, 41, 42, 43, 44</div>
+          <div class="card-labels">
+            <span class="card-label label-road">Road Running</span>
+            <span class="card-label label-waterproof">Impermeabil</span>
+          </div>
+          <div class="card-meta">
+            <span class="card-code">HQ0264-001</span>
+          </div>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-current">650<span class="price-currency">Lei</span></span>
+            </div>
+            <button class="btn-add-cart">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              Adaugă
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 12 -->
+      <div class="product-card">
+        <div class="card-badges">
+          <span class="badge badge-sale">–20%</span>
+          <span class="badge badge-hot">Exclusive</span>
+        </div>
+        <button class="card-wishlist" onclick="toggleWishlist(this)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+        <div class="card-img-wrap">
+          <img src="12.png" alt="Nike ZoomX Zegama 2" loading="lazy" />
+          <div class="card-quick-actions">
+            <button class="quick-view-btn">Vizualizare rapidă</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-brand">Nike</div>
+          <div class="card-name">ZoomX Zegama 2 Hyper Crimson</div>
+          <div class="card-sizes"><strong>Disponibil:</strong> 39, 40, 41, 42, 43, 44, 45</div>
+          <div class="card-labels">
+            <span class="card-label label-trail">Trail Running</span>
+            <span class="card-label label-breath">Respirabil</span>
+          </div>
+          <div class="card-meta">
+            <span class="card-code">FD5190-800</span>
+          </div>
+          <div class="card-footer">
+            <div class="card-price">
+              <span class="price-current">520<span class="price-currency">Lei</span></span>
+              <span class="price-original">650 Lei</span>
+            </div>
+            <button class="btn-add-cart">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              Adaugă
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /product-grid -->
+
+    <!-- PAGINATION -->
+    <div class="pagination-wrap">
+      <span class="pagination-info">Pagina 1 din 99</span>
+      <nav class="pagination">
+        <button class="page-btn arrow" disabled>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">4</button>
+        <button class="page-btn">5</button>
+        <span class="page-dots">…</span>
+        <button class="page-btn">99</button>
+        <button class="page-btn arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </nav>
+    </div>
+
+  </div><!-- /product-area -->
+</div><!-- /main-wrapper -->
+
+<!-- â•â•â• FOOTER â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<footer>
+  <div class="footer-top">
+
+    <div class="footer-brand">
+      <div class="footer-logo-wrap">
+        <div class="footer-logo-mark">
+          <span>ONLY</span>
+          <span>SPORT</span>
+        </div>
+        <span class="footer-tagline">OnlySport.ro</span>
+      </div>
+      <p class="footer-desc">
+        Comandați online sau vizitați-ne în magazinul din Târgu Mureș. Produse originale 100%, deținute de magazinul oficial OnlySport.ro
+      </p>
+      <div class="footer-highlights">
+        <div class="footer-highlight">
+          <div class="fh-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          Livrare gratuită pentru comenzi &ge; 300 Lei
+        </div>
+        <div class="footer-highlight">
+          <div class="fh-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          Produse originale 100% garantate
+        </div>
+        <div class="footer-highlight">
+          <div class="fh-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          </div>
+          Retururi ușoare în 30 de zile
+        </div>
+        <div class="footer-highlight">
+          <div class="fh-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          </div>
+          Plată securizată — card, transfer, ramburs
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-info">
+      <div class="footer-col-title">Informații</div>
+      <ul class="footer-links">
+        <li><a href="#">Despre Noi</a></li>
+        <li><a href="#">Cum comand?</a></li>
+        <li><a href="#">Cum returnez un produs?</a></li>
+        <li><a href="#">Transport și livrare</a></li>
+        <li><a href="#">Metoda de plată</a></li>
+        <li><a href="#">Politica de Confidențialitate</a></li>
+        <li><a href="#">Termeni și Condiții</a></li>
+        <li><a href="#">ANPC</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <div class="footer-col-title">Contactează-ne</div>
+      <div class="footer-contact-item">
+        <div class="fci-icon">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="fci-text">
+          <strong>Adresă</strong>
+          Str. Revoluției Nr. 3, Târgu Mureș<br>Luni–Vineri 10–19:00, Sâmbătă 10–14:00
+        </div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="fci-icon">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6 19.79 19.79 0 0 1 1.64 5a2 2 0 0 1 1.95-2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 5.61 5.62l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div class="fci-text">
+          <strong>Telefon</strong>
+          +40 752 210 622
+        </div>
+      </div>
+      <div class="footer-contact-item">
+        <div class="fci-icon">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="fci-text">
+          <strong>Email</strong>
+          office@onlysport.ro
+        </div>
+      </div>
+      <div class="footer-col-title" style="margin-top:20px;">Urmărește-ne</div>
+      <div class="social-links">
+        <a href="#" class="social-link" title="Facebook">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" class="social-link" title="Instagram">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="#" class="social-link" title="TikTok">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <span class="footer-copy">Â© 2025 OnlySport.ro — Toate drepturile rezervate</span>
+      <div class="footer-badges">
+        <span class="anpc-badge">ANPC</span>
+        <span class="anpc-badge">SOL ONLINE</span>
+      </div>
+      <div class="footer-payments">
+        <span class="payment-icon">VISA</span>
+        <span class="payment-icon">MC</span>
+        <span class="payment-icon">GPAY</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- â•â•â• JAVASCRIPT â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<script>
+  /* Filter group toggle */
+  function toggleGroup(id) {
+    const group = document.getElementById(id);
+    group.classList.toggle('open');
+  }
+
+  /* Size pill toggle */
+  function toggleSize(el) {
+    el.classList.toggle('selected');
+  }
+
+  /* Color swatch toggle */
+  function toggleSwatch(el) {
+    el.classList.toggle('selected');
+  }
+
+  /* Wishlist toggle */
+  function toggleWishlist(btn) {
+    const isActive = btn.classList.toggle('active');
+    btn.innerHTML = isActive
+      ? `<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`
+      : `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`;
+  }
+
+  /* Clear all filters */
+  function clearFilters() {
+    document.querySelectorAll('.filter-option input').forEach(i => i.checked = false);
+    document.querySelectorAll('.size-pill').forEach(p => p.classList.remove('selected'));
+    document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('selected'));
+    document.querySelectorAll('.filter-tag').forEach(t => t.remove());
+  }
+
+  /* View toggle (grid/list) */
+  document.querySelectorAll('.view-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  /* Pagination */
+  document.querySelectorAll('.page-btn:not(.arrow)').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.page-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  /* Size overlay — required before add to cart */
+  const AVAILABLE_SIZES = ['38', '39', '40', '40.5', '41', '42', '43', '44', '45'];
+
+  function buildSizeOverlay(card) {
+    const priceEl = card.querySelector('.price-current');
+    const priceText = priceEl ? priceEl.textContent.trim() : '';
+
+    const overlay = document.createElement('div');
+    overlay.className = 'size-overlay';
+    overlay.innerHTML = `
+      <button class="so-close" aria-label="Închide">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div class="so-price">${priceText}</div>
+      <div class="so-label">Alege mărimea</div>
+      <div class="so-selected"></div>
+      <div class="so-pills">
+        ${AVAILABLE_SIZES.map(s => `<div class="so-pill" data-size="${s}">${s}</div>`).join('')}
+      </div>
+      <button class="so-confirm" disabled>Adaugă în coș</button>
+      <div class="so-hint">Selectează o mărime pentru a continua</div>
+    `;
+
+    /* Close */
+    overlay.querySelector('.so-close').addEventListener('click', () => {
+      overlay.classList.remove('visible');
+      setTimeout(() => overlay.remove(), 200);
+    });
+
+    /* Size selection */
+    overlay.querySelectorAll('.so-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        overlay.querySelectorAll('.so-pill').forEach(p => p.classList.remove('selected'));
+        pill.classList.add('selected');
+        overlay.querySelector('.so-selected').textContent = `Mărimea selectată: ${pill.dataset.size}`;
+        overlay.querySelector('.so-hint').style.display = 'none';
+        const confirmBtn = overlay.querySelector('.so-confirm');
+        confirmBtn.disabled = false;
+        confirmBtn.classList.add('ready');
+      });
+    });
+
+    /* Confirm */
+    overlay.querySelector('.so-confirm').addEventListener('click', function() {
+      if (this.disabled) return;
+      this.innerHTML = `
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg> Adăugat în coș!`;
+      this.style.background = '#16a34a';
+      this.style.color = '#fff';
+      setTimeout(() => {
+        overlay.classList.remove('visible');
+        setTimeout(() => overlay.remove(), 200);
+      }, 1500);
+    });
+
+    return overlay;
+  }
+
+  document.querySelectorAll('.btn-add-cart').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const card = this.closest('.product-card');
+      if (card.querySelector('.size-overlay')) return; /* already open */
+      const overlay = buildSizeOverlay(card);
+      card.appendChild(overlay);
+      requestAnimationFrame(() => overlay.classList.add('visible'));
+    });
+  });
+
+  /* â”€â”€â”€ MOBILE DRAWER / SORT SHEET â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+
+  function openFilterDrawer() {
+    // Clonăm conținutul sidebar-ului în drawer
+    const sidebar = document.querySelector('.sidebar');
+    const drawerBody = document.getElementById('drawerBody');
+    drawerBody.innerHTML = '';
+    // Copiem toate filter-group-urile
+    const groups = sidebar.querySelectorAll('.filter-group');
+    groups.forEach(g => {
+      drawerBody.appendChild(g.cloneNode(true));
+    });
+    // Re-atașăm event listeners pe copii
+    drawerBody.querySelectorAll('.filter-group-header').forEach(header => {
+      header.addEventListener('click', function() {
+        const group = this.closest('.filter-group');
+        group.classList.toggle('open');
+        const body = group.querySelector('.filter-group-body');
+        if (body) body.style.display = group.classList.contains('open') ? 'flex' : 'none';
+      });
+    });
+    drawerBody.querySelectorAll('.filter-group-body').forEach(body => {
+      body.style.display = body.closest('.filter-group').classList.contains('open') ? 'flex' : 'none';
+    });
+
+    document.getElementById('filterDrawer').classList.add('open');
+    document.getElementById('drawerOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeFilterDrawer() {
+    document.getElementById('filterDrawer').classList.remove('open');
+    document.getElementById('drawerOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function openSortSheet() {
+    document.getElementById('sortSheet').classList.add('open');
+    document.getElementById('sortOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSortSheet() {
+    document.getElementById('sortSheet').classList.remove('open');
+    document.getElementById('sortOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function selectSort(el, val) {
+    document.querySelectorAll('.sort-option').forEach(o => o.classList.remove('active'));
+    el.classList.add('active');
+    // Sync desktop select
+    const sel = document.querySelector('.sort-select');
+    if (sel) sel.value = val;
+    setTimeout(closeSortSheet, 180);
+  }
+
+  // Swipe down to close sort sheet
+  (function() {
+    const sheet = document.getElementById('sortSheet');
+    let startY = 0;
+    sheet.addEventListener('touchstart', e => { startY = e.touches[0].clientY; }, { passive: true });
+    sheet.addEventListener('touchend', e => {
+      if (e.changedTouches[0].clientY - startY > 60) closeSortSheet();
+    }, { passive: true });
+  })();
+
+</script>
+
+</body>
+</html>
